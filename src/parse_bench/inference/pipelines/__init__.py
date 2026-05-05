@@ -46,11 +46,13 @@ def list_pipelines() -> list[str]:
 
 def _register_builtin_pipelines() -> None:
     """Register all built-in pipeline configurations from submodules."""
+    from parse_bench.inference.pipelines.extract import register_extract_pipelines
     from parse_bench.inference.pipelines.layout import register_layout_pipelines
     from parse_bench.inference.pipelines.parse import register_parse_pipelines
 
     register_parse_pipelines(register_pipeline)
     register_layout_pipelines(register_pipeline)
+    register_extract_pipelines(register_pipeline)
 
 
 # Auto-register built-in pipelines on import

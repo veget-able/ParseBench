@@ -17,6 +17,7 @@ from parse_bench.inference.runner import InferenceRunner
 from parse_bench.schemas.product import ProductType
 from parse_bench.test_cases import load_test_cases
 from parse_bench.test_cases.schema import (
+    ExtractTestCase,
     LayoutDetectionTestCase,
     TestCase,
 )
@@ -34,6 +35,8 @@ def _detect_product_type(test_cases: list[TestCase]) -> ProductType | None:
 
     # Check first test case type to determine product type
     first = test_cases[0]
+    if isinstance(first, ExtractTestCase):
+        return ProductType.EXTRACT
     if isinstance(first, LayoutDetectionTestCase):
         return ProductType.LAYOUT_DETECTION
     # Default to PARSE for ParseTestCase or unknown types
@@ -218,6 +221,12 @@ class InferenceCLI:
                     f"Auto-detected product type: {detected_type.value} (pipeline default: {product_type_enum.value})"
                 )
                 product_type_enum = detected_type
+            elif detected_type == ProductType.EXTRACT and product_type_enum == ProductType.PARSE:
+                # Parse pipelines can run over extract datasets when the
+                # extract_field rules are used as grounding/evidence tests.
+                # Keep the ExtractTestCase objects for file/schema/rule
+                # metadata, but run inference as PARSE.
+                pass
             elif detected_type != product_type_enum:
                 # For other cases, reload with the pipeline's product type filter
                 try:

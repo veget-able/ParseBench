@@ -219,6 +219,48 @@ class InferenceRunner:
         normalized_path = self.output_dir / f"{example_id}.result.json"
         return raw_path, normalized_path
 
+    def _signal_cancel_and_cancel_future(
+        self,
+        example_id: str,
+        future: concurrent.futures.Future[Any],
+    ) -> None:
+        """Signal provider cancellation and mark the Python future cancelled."""
+        cancel_fn = getattr(self.provider, "cancel", None)
+        if callable(cancel_fn):
+            try:
+                cancel_fn(example_id)
+            except Exception as exc:  # pragma: no cover - defensive
+                print(f"  Warning: provider.cancel({example_id}) raised: {exc}")
+        future.cancel()
+
+    def _cancel_inflight_and_drain(
+        self,
+        example_id: str,
+        future: concurrent.futures.Future[Any],
+        *,
+        drain_timeout_seconds: float = 5.0,
+    ) -> None:
+        """Best-effort timeout cancel for synchronous retry loops."""
+        self._signal_cancel_and_cancel_future(example_id, future)
+        try:
+            future.result(timeout=drain_timeout_seconds)
+        except (concurrent.futures.TimeoutError, concurrent.futures.CancelledError, Exception):
+            pass
+
+    async def _cancel_inflight_and_drain_async(
+        self,
+        example_id: str,
+        future: concurrent.futures.Future[Any],
+        *,
+        drain_timeout_seconds: float = 5.0,
+    ) -> None:
+        """Best-effort timeout cancel for async retry loops without blocking the event loop."""
+        self._signal_cancel_and_cancel_future(example_id, future)
+        try:
+            await asyncio.wait_for(asyncio.wrap_future(future), timeout=drain_timeout_seconds)
+        except (TimeoutError, concurrent.futures.CancelledError, asyncio.CancelledError, Exception):
+            pass
+
     def _is_already_processed(self, example_id: str) -> bool:
         """Check if a file has already been processed."""
         if self.force:
@@ -633,6 +675,8 @@ class InferenceRunner:
                 example_id=test_case.test_id,
                 source_file_path=str(prepared_source),
                 product_type=product_type,
+                schema_override=getattr(test_case, "data_schema", None),
+                config_override=getattr(test_case, "config", None),
             )
 
             # Run inference with retry for transient / rate-limit errors
@@ -931,6 +975,7 @@ class InferenceRunner:
                     raw_result, normalized_result, error_info = future.result(timeout=self.per_file_timeout)
                     break  # Success (or handled provider error) - exit retry loop
                 except concurrent.futures.TimeoutError:
+                    self._cancel_inflight_and_drain(test_case.test_id, future)
                     remaining = self.timeout_retries - timeout_attempt
                     if remaining > 0:
                         print(
@@ -1056,26 +1101,21 @@ class InferenceRunner:
                 self.job_statuses[test_case.test_id].status = "running"
                 self.job_statuses[test_case.test_id].started_at = datetime.now()
 
-            # Process test case using our custom thread pool with per-file timeout
-            # (asyncio.to_thread uses default pool limited to ~6 threads on 2-CPU runners)
-            loop = asyncio.get_running_loop()
+            # Process test case using our custom thread pool with per-file timeout.
             raw_result = None
             normalized_result = None
             error_info: str | tuple[str, str, str] | None = None
 
             for timeout_attempt in range(self.timeout_retries + 1):
+                future = self._thread_pool.submit(self._process_test_case, test_case, product_type)
                 try:
                     raw_result, normalized_result, error_info = await asyncio.wait_for(
-                        loop.run_in_executor(
-                            self._thread_pool,
-                            self._process_test_case,
-                            test_case,
-                            product_type,
-                        ),
+                        asyncio.wrap_future(future),
                         timeout=self.per_file_timeout,
                     )
                     break  # Success (or handled provider error) - exit retry loop
                 except TimeoutError:
+                    await self._cancel_inflight_and_drain_async(test_case.test_id, future)
                     remaining = self.timeout_retries - timeout_attempt
                     if remaining > 0:
                         print(
@@ -1161,27 +1201,21 @@ class InferenceRunner:
                 self.job_statuses[example_id].status = "running"
                 self.job_statuses[example_id].started_at = datetime.now()
 
-            # Process document using our custom thread pool with per-file timeout
-            # (asyncio.to_thread uses default pool limited to ~6 threads on 2-CPU runners)
-            loop = asyncio.get_running_loop()
+            # Process document using our custom thread pool with per-file timeout.
             raw_result = None
             normalized_result = None
             error_info: str | tuple[str, str, str] | None = None
 
             for timeout_attempt in range(self.timeout_retries + 1):
+                future = self._thread_pool.submit(self._process_document, pdf_path, example_id, product_type)
                 try:
                     raw_result, normalized_result, error_info = await asyncio.wait_for(
-                        loop.run_in_executor(
-                            self._thread_pool,
-                            self._process_document,
-                            pdf_path,
-                            example_id,
-                            product_type,
-                        ),
+                        asyncio.wrap_future(future),
                         timeout=self.per_file_timeout,
                     )
                     break  # Success (or handled provider error) - exit retry loop
                 except TimeoutError:
+                    await self._cancel_inflight_and_drain_async(example_id, future)
                     remaining = self.timeout_retries - timeout_attempt
                     if remaining > 0:
                         print(f"  Timeout after {self.per_file_timeout}s for {example_id}, retrying ({remaining} left)")

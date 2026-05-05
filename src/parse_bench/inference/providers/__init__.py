@@ -2,6 +2,7 @@
 
 # Import providers to register them
 from parse_bench.inference.providers import (
+    extract,  # noqa: F401
     layoutdet,  # noqa: F401
     parse,  # noqa: F401
 )

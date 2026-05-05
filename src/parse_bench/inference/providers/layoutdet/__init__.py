@@ -1,18 +1,11 @@
-"""Layout detection providers for inference endpoints."""
+"""Layout detection providers imported lazily for registry side effects."""
 
-# Import providers to register them
-from parse_bench.inference.providers.layoutdet import (
-    chandra,  # noqa: F401
-    docling,  # noqa: F401
-    dots_ocr,  # noqa: F401
-    layout_v3,  # noqa: F401
-    paddle,  # noqa: F401
-    qwen3vl,  # noqa: F401
-    surya,  # noqa: F401
-    yolo,  # noqa: F401
-)
+import importlib
+import logging
 
-__all__ = [
+logger = logging.getLogger(__name__)
+
+_PROVIDER_MODULES = [
     "chandra",
     "docling",
     "dots_ocr",
@@ -22,3 +15,11 @@ __all__ = [
     "surya",
     "yolo",
 ]
+
+for _mod in _PROVIDER_MODULES:
+    try:
+        importlib.import_module(f"parse_bench.inference.providers.layoutdet.{_mod}")
+    except ImportError:
+        logger.debug("Skipping layout provider %s (missing dependency)", _mod)
+
+__all__ = _PROVIDER_MODULES
