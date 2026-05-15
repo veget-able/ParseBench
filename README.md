@@ -22,14 +22,14 @@ _Top 10 by Overall score. For the full sortable, filterable leaderboard, see [pa
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|
 | 1 | LlamaParse Agentic | LlamaParse | 84.88 | 90.74 | 78.11 | 89.68 | 85.24 | 80.62 | 1.25¢ |
 | 2 | Google Gemini 3 Flash (Thinking High) | VLM - Proprietary | 75.05 | 91.50 | 64.79 | 90.87 | 68.31 | 59.77 | 2.41¢ |
-| 3 | Reducto (Agentic) | Commercial - Startup APIs | 72.97 | 80.42 | 73.4 | 86.37 | 57.6 | 67.07 | 4.76¢ |
-| 4 | LlamaParse Cost Effective | LlamaParse | 71.89 | 73.16 | 66.66 | 88.02 | 73.04 | 58.56 | 0.38¢ |
-| 5 | Google Gemini 3 Flash (Thinking Minimal) | VLM - Proprietary | 71.04 | 89.85 | 64.83 | 86.19 | 58.35 | 55.97 | 0.65¢ |
-| 6 | Chandra-ocr-2 | VLM - Open Weight | 70.1 | 89.2 | 65.1 | 83.7 | 61.4 | 51.2 | — |
-| 7 | Google Gemini 3.1 Pro | VLM - Proprietary | 69.14 | 91.00 | 41.13 | 90.16 | 52.43 | 70.99 | 8.49¢ |
-| 8 | Reducto | Commercial - Startup APIs | 67.83 | 70.33 | 56.99 | 86.37 | 56.75 | 68.71 | 2.38¢ |
-| 9 | Extend (Beta) | Commercial - Startup APIs | 67.83 | 85.93 | 40.42 | 85.03 | 59.49 | 68.28 | 2.50¢ |
-| 10 | OpenAI GPT-5.5 (Reasoning Medium) | VLM - Proprietary | 67.76 | 90.05 | 65.53 | 86.81 | 60.12 | 36.28 | 13.09¢ |
+| 3 | Infinity-Parser2-Pro | VLM - Open Weight | 74.28 | 86.4 | 61.3 | 89.7 | 59.1 | 74.9 | — |
+| 4 | Infinity-Parser2-Flash | VLM - Open Weight | 73.25 | 82.88 | 55.56 | 89.52 | 57.7 | 80.61 | — |
+| 5 | Reducto (Agentic) | Commercial - Startup APIs | 72.97 | 80.42 | 73.4 | 86.37 | 57.6 | 67.07 | 4.76¢ |
+| 6 | LlamaParse Cost Effective | LlamaParse | 71.89 | 73.16 | 66.66 | 88.02 | 73.04 | 58.56 | 0.38¢ |
+| 7 | Google Gemini 3 Flash (Thinking Minimal) | VLM - Proprietary | 71.04 | 89.85 | 64.83 | 86.19 | 58.35 | 55.97 | 0.65¢ |
+| 8 | Chandra-ocr-2 | VLM - Open Weight | 70.1 | 89.2 | 65.1 | 83.7 | 61.4 | 51.2 | — |
+| 9 | Google Gemini 3.1 Pro | VLM - Proprietary | 69.14 | 91.00 | 41.13 | 90.16 | 52.43 | 70.99 | 8.49¢ |
+| 10 | Reducto | Commercial - Startup APIs | 67.83 | 70.33 | 56.99 | 86.37 | 56.75 | 68.71 | 2.38¢ |
 <!-- LEADERBOARD:END -->
 
 **Inclusion criteria:**
