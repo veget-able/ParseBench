@@ -1,6 +1,7 @@
 """Provider for PyMuPDF4LLM PARSE."""
 
 from datetime import datetime
+import os
 from pathlib import Path
 from typing import Any
 
@@ -9,6 +10,7 @@ from parse_bench.inference.providers.base import (
     ProviderConfigError,
     ProviderPermanentError,
 )
+from parse_bench.inference.providers.parse._pymupdf4llm_layout import layout_json_to_layout_output
 from parse_bench.inference.providers.registry import register_provider
 from parse_bench.schemas.parse_output import PageIR, ParseOutput
 from parse_bench.schemas.pipeline import PipelineSpec
@@ -26,12 +28,22 @@ class PyMuPDF4LLMProvider(Provider):
 
     def __init__(self, provider_name: str, base_config: dict[str, Any] | None = None):
         super().__init__(provider_name, base_config)
+        self._use_tgif = self.base_config.get("use_tgif")
+        self._activate_layout = bool(self.base_config.get("activate_layout", self._use_tgif is not None))
+        if self._use_tgif is not None:
+            os.environ["USE_TGIF"] = str(self._use_tgif)
 
-    def _extract(self, pdf_path: str) -> dict[str, Any]:
+    def _import_pymupdf4llm(self) -> Any:
         try:
+            if self._activate_layout:
+                import pymupdf.layout  # noqa: F401
             import pymupdf4llm
         except ImportError as e:
             raise ProviderConfigError("pymupdf4llm not installed. Run: pip install pymupdf4llm") from e
+        return pymupdf4llm
+
+    def _extract(self, pdf_path: str) -> dict[str, Any]:
+        pymupdf4llm = self._import_pymupdf4llm()
 
         try:
             page_chunks = pymupdf4llm.to_markdown(
@@ -47,10 +59,17 @@ class PyMuPDF4LLMProvider(Provider):
 
         return {"pages": pages, "num_pages": len(pages)}
 
+    def _extract_layout(self, pdf_path: str) -> dict[str, Any]:
+        pymupdf4llm = self._import_pymupdf4llm()
+        try:
+            return {"layout_json": pymupdf4llm.to_json(pdf_path), "markdown": ""}
+        except Exception as e:
+            raise ProviderPermanentError(f"PyMuPDF4LLM layout error: {e}") from e
+
     def run_inference(self, pipeline: PipelineSpec, request: InferenceRequest) -> RawInferenceResult:
-        if request.product_type != ProductType.PARSE:
+        if request.product_type not in (ProductType.PARSE, ProductType.LAYOUT_DETECTION):
             raise ProviderPermanentError(
-                f"PyMuPDF4LLMProvider only supports PARSE, got {request.product_type}"
+                f"PyMuPDF4LLMProvider only supports PARSE and LAYOUT_DETECTION, got {request.product_type}"
             )
 
         pdf_path = Path(request.source_file_path)
@@ -59,7 +78,11 @@ class PyMuPDF4LLMProvider(Provider):
 
         started_at = datetime.now()
         try:
-            raw_output = self._extract(str(pdf_path))
+            raw_output = (
+                self._extract_layout(str(pdf_path))
+                if request.product_type == ProductType.LAYOUT_DETECTION
+                else self._extract(str(pdf_path))
+            )
             completed_at = datetime.now()
             return RawInferenceResult(
                 request=request,
@@ -111,6 +134,24 @@ class PyMuPDF4LLMProvider(Provider):
         return "\n".join(result_parts)
 
     def normalize(self, raw_result: RawInferenceResult) -> InferenceResult:
+        if raw_result.product_type == ProductType.LAYOUT_DETECTION:
+            output = layout_json_to_layout_output(
+                raw_result.raw_output.get("layout_json"),
+                example_id=raw_result.request.example_id,
+                pipeline_name=raw_result.pipeline_name,
+                markdown=str(raw_result.raw_output.get("markdown", "")),
+            )
+            return InferenceResult(
+                request=raw_result.request,
+                pipeline_name=raw_result.pipeline_name,
+                product_type=raw_result.product_type,
+                raw_output=raw_result.raw_output,
+                output=output,
+                started_at=raw_result.started_at,
+                completed_at=raw_result.completed_at,
+                latency_in_ms=raw_result.latency_in_ms,
+            )
+
         pages: list[PageIR] = []
         page_texts: list[str] = []
         for page_data in raw_result.raw_output.get("pages", []):

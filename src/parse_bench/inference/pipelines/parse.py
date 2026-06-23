@@ -492,6 +492,29 @@ def register_parse_pipelines(register_fn) -> None:  # type: ignore[no-untyped-de
 
     register_fn(
         PipelineSpec(
+            pipeline_name="pymupdf4llm_v4",
+            provider_name="pymupdf4llm",
+            product_type=ProductType.PARSE,
+            config={
+                "use_tgif": "4",
+                "activate_layout": True,
+            },
+        )
+    )
+
+    register_fn(
+        PipelineSpec(
+            pipeline_name="pymupdf4llm_legacy",
+            provider_name="pymupdf4llm",
+            product_type=ProductType.PARSE,
+            config={
+                "use_tgif": "0",
+            },
+        )
+    )
+
+    register_fn(
+        PipelineSpec(
             pipeline_name="markitdown",
             provider_name="markitdown",
             product_type=ProductType.PARSE,

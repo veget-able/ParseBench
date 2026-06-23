@@ -214,7 +214,7 @@ class InferenceCLI:
             if (
                 detected_type is not None
                 and detected_type != product_type_enum
-                and pipeline_spec.provider_name in {"llamaparse"}
+                and pipeline_spec.provider_name in {"llamaparse", "pymupdf4llm"}
                 and detected_type == ProductType.LAYOUT_DETECTION
             ):
                 print(

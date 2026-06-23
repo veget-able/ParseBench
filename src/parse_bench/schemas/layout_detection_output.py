@@ -315,6 +315,7 @@ class LayoutDetectionModel(StrEnum):
     GEMMA4_LAYOUT = "gemma4_layout"
     DATABRICKS_LAYOUT = "databricks_layout"
     INFINITY_PARSER2_LAYOUT = "infinity_parser2_layout"
+    PYMUPDF4LLM = "pymupdf4llm"
 
 
 LAYOUT_MODEL_INFO: dict[LayoutDetectionModel, dict[str, str]] = {
@@ -433,6 +434,10 @@ LAYOUT_MODEL_INFO: dict[LayoutDetectionModel, dict[str, str]] = {
     LayoutDetectionModel.INFINITY_PARSER2_LAYOUT: {
         "name": "Infinity-Parser2 Layout",
         "hf_url": "https://huggingface.co/collections/infly/infinity-parser2",
+    },
+    LayoutDetectionModel.PYMUPDF4LLM: {
+        "name": "PyMuPDF4LLM Layout",
+        "hf_url": "https://github.com/pymupdf/PyMuPDF4LLM",
     },
 }
 
