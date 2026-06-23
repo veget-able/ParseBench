@@ -210,11 +210,11 @@ class InferenceCLI:
             detected_type = _detect_product_type(test_cases)
 
             # Check if we should override the pipeline's product type
-            # LlamaParse API and local cli2 providers support PARSE -> LAYOUT_DETECTION override.
+            # LlamaParse API supports PARSE -> LAYOUT_DETECTION override.
             if (
                 detected_type is not None
                 and detected_type != product_type_enum
-                and pipeline_spec.provider_name in {"llamaparse", "pymupdf4llm"}
+                and pipeline_spec.provider_name in {"llamaparse"}
                 and detected_type == ProductType.LAYOUT_DETECTION
             ):
                 print(

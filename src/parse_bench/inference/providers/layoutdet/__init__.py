@@ -11,6 +11,7 @@ _PROVIDER_MODULES = [
     "dots_ocr",
     "layout_v3",
     "paddle",
+    "pymupdf4llm",
     "qwen3vl",
     "surya",
     "yolo",

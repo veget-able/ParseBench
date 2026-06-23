@@ -14,7 +14,7 @@ def register_layout_pipelines(register_fn) -> None:  # type: ignore[no-untyped-d
     register_fn(
         PipelineSpec(
             pipeline_name="pymupdf4llm_layout_v4",
-            provider_name="pymupdf4llm",
+            provider_name="pymupdf4llm_layout",
             product_type=ProductType.LAYOUT_DETECTION,
             config={
                 "use_tgif": "4",
