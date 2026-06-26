@@ -134,6 +134,8 @@ class PyMuPDF4LLMLabelMapper(LayoutLabelMapper):
         "sectionheader": CanonicalLabel.SECTION_HEADER,
         "heading": CanonicalLabel.SECTION_HEADER,
         "table": CanonicalLabel.TABLE,
+        "table-fallback": CanonicalLabel.TABLE,
+        "tablefallback": CanonicalLabel.TABLE,
         "text": CanonicalLabel.TEXT,
         "title": CanonicalLabel.TITLE,
         "code": CanonicalLabel.CODE,

@@ -1,5 +1,6 @@
 """Provider for PyMuPDF4LLM PARSE."""
 
+import json
 from datetime import datetime
 import os
 from pathlib import Path
@@ -11,7 +12,13 @@ from parse_bench.inference.providers.base import (
     ProviderPermanentError,
 )
 from parse_bench.inference.providers.registry import register_provider
-from parse_bench.schemas.parse_output import PageIR, ParseOutput
+from parse_bench.schemas.parse_output import (
+    LayoutItemIR,
+    LayoutSegmentIR,
+    PageIR,
+    ParseLayoutPageIR,
+    ParseOutput,
+)
 from parse_bench.schemas.pipeline import PipelineSpec
 from parse_bench.schemas.pipeline_io import (
     InferenceRequest,
@@ -19,6 +26,24 @@ from parse_bench.schemas.pipeline_io import (
     RawInferenceResult,
 )
 from parse_bench.schemas.product import ProductType
+
+
+def _box_text(box: dict[str, Any]) -> str:
+    """Aggregate text from a PyMuPDF4LLM layout box's textlines/spans."""
+    parts: list[str] = []
+    textlines = box.get("textlines") or []
+    if not isinstance(textlines, list):
+        return ""
+    for line in textlines:
+        if not isinstance(line, dict):
+            continue
+        spans = line.get("spans") or []
+        if not isinstance(spans, list):
+            continue
+        for span in spans:
+            if isinstance(span, dict) and span.get("text"):
+                parts.append(str(span["text"]))
+    return " ".join(parts).strip()
 
 
 @register_provider("pymupdf4llm")
@@ -45,18 +70,59 @@ class PyMuPDF4LLMProvider(Provider):
         pymupdf4llm = self._import_pymupdf4llm()
 
         try:
+            table_output = self.base_config.get("table_output")
+            if table_output is None and os.environ.get("PYMUPDF_TABLE_HTML"):
+                table_output = "html"
+            table_kwargs = {"table_output": table_output} if table_output is not None else {}
             page_chunks = pymupdf4llm.to_markdown(
-                pdf_path, page_chunks=True, show_progress=False, use_ocr=False
+                pdf_path, page_chunks=True, show_progress=False, use_ocr=False, **table_kwargs
             )
         except Exception as e:
             raise ProviderPermanentError(f"PyMuPDF4LLM error: {e}") from e
+
+        layout_pages: list[dict[str, Any]] = []
+        try:
+            try:
+                layout_json = pymupdf4llm.to_json(pdf_path, use_ocr=False)
+            except TypeError:
+                layout_json = pymupdf4llm.to_json(pdf_path)
+            parsed_layout = layout_json if isinstance(layout_json, dict) else json.loads(layout_json)
+            for page in parsed_layout.get("pages", []):
+                if not isinstance(page, dict):
+                    continue
+                boxes = []
+                for box in page.get("boxes", []) or []:
+                    if not isinstance(box, dict):
+                        continue
+                    boxes.append(
+                        {
+                            "bbox": [box.get("x0"), box.get("y0"), box.get("x1"), box.get("y1")],
+                            "boxclass": box.get("boxclass") or "text",
+                            "text": _box_text(box),
+                        }
+                    )
+                layout_pages.append(
+                    {
+                        "page_number": page.get("page_number", 1),
+                        "width": page.get("width"),
+                        "height": page.get("height"),
+                        "boxes": boxes,
+                    }
+                )
+        except Exception:
+            layout_pages = []
 
         pages = []
         for i, chunk in enumerate(page_chunks):
             text = chunk.get("text", "") if isinstance(chunk, dict) else str(chunk)
             pages.append({"page_index": i, "text": text})
 
-        return {"pages": pages, "num_pages": len(pages)}
+        return {
+            "pages": pages,
+            "num_pages": len(pages),
+            "layout_pages": layout_pages,
+            "layout_source": "pymupdf4llm.to_json",
+        }
 
     def run_inference(self, pipeline: PipelineSpec, request: InferenceRequest) -> RawInferenceResult:
         if request.product_type != ProductType.PARSE:
@@ -119,6 +185,55 @@ class PyMuPDF4LLMProvider(Provider):
             _flush()
         return "\n".join(result_parts)
 
+    @staticmethod
+    def _build_layout_pages(raw_layout: list[dict[str, Any]]) -> list[ParseLayoutPageIR]:
+        """Map raw PyMuPDF4LLM layout boxes into ParseOutput.layout_pages."""
+        output: list[ParseLayoutPageIR] = []
+        for page in raw_layout:
+            try:
+                page_width = float(page.get("width") or 0) or None
+                page_height = float(page.get("height") or 0) or None
+            except (TypeError, ValueError):
+                page_width = page_height = None
+            if not page_width or not page_height:
+                continue
+
+            items: list[LayoutItemIR] = []
+            for box in page.get("boxes", []) or []:
+                bbox = box.get("bbox") or []
+                if len(bbox) != 4 or any(coord is None for coord in bbox):
+                    continue
+                x0, y0, x1, y1 = (float(coord) for coord in bbox)
+                if not (x0 < x1 and y0 < y1):
+                    continue
+                label = str(box.get("boxclass") or "text")
+                text = str(box.get("text") or "")
+                items.append(
+                    LayoutItemIR(
+                        type=label,
+                        value=text,
+                        layout_segments=[
+                            LayoutSegmentIR(
+                                x=x0 / page_width,
+                                y=y0 / page_height,
+                                w=(x1 - x0) / page_width,
+                                h=(y1 - y0) / page_height,
+                                label=label,
+                            )
+                        ],
+                    )
+                )
+
+            output.append(
+                ParseLayoutPageIR(
+                    page_number=int(page.get("page_number", 1)),
+                    width=page_width,
+                    height=page_height,
+                    items=items,
+                )
+            )
+        return output
+
     def normalize(self, raw_result: RawInferenceResult) -> InferenceResult:
         pages: list[PageIR] = []
         page_texts: list[str] = []
@@ -134,6 +249,7 @@ class PyMuPDF4LLMProvider(Provider):
             example_id=raw_result.request.example_id,
             pipeline_name=raw_result.pipeline_name,
             pages=pages,
+            layout_pages=self._build_layout_pages(raw_result.raw_output.get("layout_pages", [])),
             markdown=full_text,
         )
         return InferenceResult(

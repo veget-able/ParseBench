@@ -719,6 +719,93 @@ def _build_docling_parse_content(item_type: str, text: str) -> LayoutTextContent
     return LayoutTextContent(text=text)
 
 
+def _build_pymupdf4llm_content(label: str, text: str) -> LayoutTextContent | None:
+    """Build content object from a PyMuPDF4LLM layout box."""
+    if not text:
+        return None
+    if label.strip().lower() == "picture":
+        return None
+    return LayoutTextContent(text=text)
+
+
+@register_layout_adapter("pymupdf4llm", priority=90)
+class PyMuPDF4LLMLayoutAdapter(LayoutAdapter):
+    """Adapter that extracts LayoutOutput from PyMuPDF4LLM ParseOutput.layout_pages."""
+
+    @classmethod
+    def matches(cls, inference_result: InferenceResult) -> bool:
+        raw_output = inference_result.raw_output
+        if not (isinstance(raw_output, dict) and raw_output.get("layout_source") == "pymupdf4llm.to_json"):
+            return False
+        return isinstance(inference_result.output, ParseOutput) and bool(inference_result.output.layout_pages)
+
+    def to_layout_output(
+        self,
+        inference_result: InferenceResult,
+        *,
+        page_filter: int | None = None,
+    ) -> LayoutOutput:
+        if isinstance(inference_result.output, LayoutOutput):
+            if page_filter is None:
+                return inference_result.output
+            filtered = [p for p in inference_result.output.predictions if p.page == page_filter]
+            return inference_result.output.model_copy(update={"predictions": filtered})
+
+        if not isinstance(inference_result.output, ParseOutput):
+            raise ValueError("PyMuPDF4LLMLayoutAdapter requires ParseOutput or LayoutOutput")
+
+        layout_pages = inference_result.output.layout_pages
+        if not layout_pages:
+            raise ValueError("PyMuPDF4LLMLayoutAdapter requires non-empty layout_pages")
+
+        selected_pages = [lp for lp in layout_pages if page_filter is None or lp.page_number == page_filter]
+        reference_page = selected_pages[0] if selected_pages else layout_pages[0]
+        output_width = int(reference_page.width or 1)
+        output_height = int(reference_page.height or 1)
+
+        predictions: list[LayoutPrediction] = []
+        for layout_page in layout_pages:
+            page_number = layout_page.page_number
+            if page_filter is not None and page_number != page_filter:
+                continue
+
+            page_width = float(layout_page.width or output_width)
+            page_height = float(layout_page.height or output_height)
+
+            for item_index, item in enumerate(layout_page.items):
+                segments = item.layout_segments or ([item.bbox] if item.bbox is not None else [])
+                for segment_index, segment in enumerate(segments):
+                    label = segment.label or item.type or "text"
+                    x1 = segment.x * page_width
+                    y1 = segment.y * page_height
+                    x2 = (segment.x + segment.w) * page_width
+                    y2 = (segment.y + segment.h) * page_height
+                    predictions.append(
+                        LayoutPrediction(
+                            bbox=[x1, y1, x2, y2],
+                            score=float(segment.confidence or 1.0),
+                            label=label,
+                            page=page_number,
+                            content=_build_pymupdf4llm_content(label, item.value),
+                            provider_metadata={
+                                "order_index": len(predictions),
+                                "item_index": item_index,
+                                "segment_index": segment_index,
+                            },
+                        )
+                    )
+
+        return LayoutOutput(
+            task_type="layout_detection",
+            example_id=inference_result.request.example_id,
+            pipeline_name=inference_result.pipeline_name,
+            model=LayoutDetectionModel.PYMUPDF4LLM,
+            image_width=max(output_width, 1),
+            image_height=max(output_height, 1),
+            predictions=predictions,
+        )
+
+
 @register_layout_adapter("docling_parse", "docling_serve", priority=90)
 class DoclingParseLayoutAdapter(LayoutAdapter):
     """Adapter that extracts LayoutOutput from Docling ParseOutput.layout_pages."""
