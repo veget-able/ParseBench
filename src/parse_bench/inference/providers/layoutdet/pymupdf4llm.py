@@ -55,7 +55,7 @@ class PyMuPDF4LLMLayoutProvider(Provider):
         started_at = datetime.now()
         try:
             raw_output = {
-                "layout_json": pymupdf4llm.to_json(str(pdf_path)),
+                "layout_json": pymupdf4llm.to_json(str(pdf_path), use_ocr=False),
                 "markdown": "",
             }
             completed_at = datetime.now()
