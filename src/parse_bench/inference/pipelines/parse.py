@@ -498,6 +498,7 @@ def register_parse_pipelines(register_fn) -> None:  # type: ignore[no-untyped-de
             config={
                 "use_tgif": "4",
                 "activate_layout": True,
+                "table_output": "html",
             },
         )
     )

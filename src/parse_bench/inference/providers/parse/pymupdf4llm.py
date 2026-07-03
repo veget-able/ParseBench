@@ -29,6 +29,7 @@ class PyMuPDF4LLMProvider(Provider):
         super().__init__(provider_name, base_config)
         self._use_tgif = self.base_config.get("use_tgif")
         self._activate_layout = bool(self.base_config.get("activate_layout", self._use_tgif is not None))
+        self._table_output = self.base_config.get("table_output")
         if self._use_tgif is not None:
             os.environ["USE_TGIF"] = str(self._use_tgif)
 
@@ -44,9 +45,15 @@ class PyMuPDF4LLMProvider(Provider):
     def _extract(self, pdf_path: str) -> dict[str, Any]:
         pymupdf4llm = self._import_pymupdf4llm()
 
+        extra_kwargs: dict[str, Any] = {}
+        if self._table_output:
+            # Opt-in HTML table rendering (pymupdf4llm forks with table_output support).
+            # The official layout path ignores unknown kwargs, so this stays compatible.
+            extra_kwargs["table_output"] = self._table_output
+
         try:
             page_chunks = pymupdf4llm.to_markdown(
-                pdf_path, page_chunks=True, show_progress=False, use_ocr=False
+                pdf_path, page_chunks=True, show_progress=False, use_ocr=False, **extra_kwargs
             )
         except Exception as e:
             raise ProviderPermanentError(f"PyMuPDF4LLM error: {e}") from e
