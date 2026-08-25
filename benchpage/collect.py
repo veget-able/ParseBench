@@ -62,11 +62,11 @@ def combine_reps(runs: list[dict]) -> dict:
     if not runs:
         raise ValueError("combine_reps needs at least one run")
 
-    p50s = [_latency_stats(r)["p50"] for r in runs]
+    p50s = [_latency_stats(r).get("p50") for r in runs]
     target = median([p for p in p50s if p is not None])
     reference = min(
         runs,
-        key=lambda r: abs((_latency_stats(r)["p50"] or 0) - (target or 0)),
+        key=lambda r: abs((_latency_stats(r).get("p50") or 0) - (target or 0)),
     )
     gtrms = {r["report"]["aggregate_metrics"].get("avg_grits_trm_composite")
              for r in runs}
