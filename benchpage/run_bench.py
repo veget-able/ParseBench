@@ -40,7 +40,7 @@ MAX_CONCURRENT = 1  # hard rule; see module docstring
 def run(config_path: str, group: str, reps: int, results_dir: str,
         label: str | None, work_dir: str, run_id: str | None,
         with_coldstart: bool, with_footprint: bool,
-        input_dir: str | None = None) -> Path:
+        input_dir: str | None = None, collect_only: bool = False) -> Path:
     config = json.loads(Path(config_path).read_text(encoding="utf-8"))
     pipelines = config["pipelines"]
     baseline_id = config.get("baseline")
@@ -51,22 +51,28 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
     work = Path(work_dir)
     work.mkdir(parents=True, exist_ok=True)
 
+    rss_path = work / "rss.json"
     peak_rss: dict[str, float] = {}
     failed: dict[str, str] = {}
-    for rep in range(reps):
-        for spec in pipelines:  # interleaved on purpose; see module docstring
-            if spec["id"] in failed:
-                continue
-            out_dir = work / f"rep{rep}" / spec["id"]
-            try:
-                rss = _run_parse_bench(spec, group, out_dir, input_dir)
-            except RuntimeError as exc:
-                # One pipeline's failure must not discard the others' results.
-                failed[spec["id"]] = str(exc)
-                print(f"[benchpage] pipeline {spec['id']} failed: {exc}")
-                continue
-            if rss is not None:
-                peak_rss[spec["id"]] = max(peak_rss.get(spec["id"], 0.0), rss)
+    if collect_only:
+        if rss_path.exists():
+            peak_rss = json.loads(rss_path.read_text(encoding="utf-8"))
+    else:
+        for rep in range(reps):
+            for spec in pipelines:  # interleaved on purpose; see module docstring
+                if spec["id"] in failed:
+                    continue
+                out_dir = work / f"rep{rep}" / spec["id"]
+                try:
+                    rss = _run_parse_bench(spec, group, out_dir, input_dir)
+                except RuntimeError as exc:
+                    # One pipeline's failure must not discard the others' results.
+                    failed[spec["id"]] = str(exc)
+                    print(f"[benchpage] pipeline {spec['id']} failed: {exc}")
+                    continue
+                if rss is not None:
+                    peak_rss[spec["id"]] = max(peak_rss.get(spec["id"], 0.0), rss)
+                    rss_path.write_text(json.dumps(peak_rss), encoding="utf-8")
 
     summary = summary_skeleton(rid)
     summary["run"].update(
@@ -217,11 +223,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--input-dir", help="test cases dir (default: ParseBench's ./data)")
     ap.add_argument("--with-coldstart", action="store_true")
     ap.add_argument("--with-footprint", action="store_true")
+    ap.add_argument("--collect-only", action="store_true",
+                    help="skip benchmarking; re-aggregate an existing work dir")
     args = ap.parse_args(argv)
     run_dir = run(args.config, args.group, args.reps, args.results_dir,
                   args.label, args.work_dir, args.run_id,
                   args.with_coldstart, args.with_footprint,
-                  input_dir=args.input_dir)
+                  input_dir=args.input_dir, collect_only=args.collect_only)
     print(f"wrote {run_dir}")
     return 0
 

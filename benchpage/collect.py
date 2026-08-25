@@ -41,7 +41,9 @@ def load_run(pipeline_dir: str | Path) -> dict:
                     "doc": row["test_id"],
                     "tags": row.get("tags", ""),
                     "success": row.get("success", "").strip().lower() == "true",
-                    "latency_ms_per_page": _float(row.get("latency_ms_per_page")),
+                    "latency_ms_per_page": _float(
+                        row.get("latency_ms_per_page") or row.get("latency_ms")
+                    ),
                     "gtrm": _scale100(_float(row.get(GTRM_COLUMN))),
                 }
             )
@@ -134,7 +136,11 @@ def document_rows(per_pipeline: dict[str, dict]) -> list[dict]:
 
 
 def _latency_stats(run: dict) -> dict:
-    return run["report"].get("aggregate_stats", {}).get("latency_ms_per_page", {})
+    # Some providers (docling_serve among them) report no page counts, so the
+    # per-page stat is absent; latency_ms is equivalent for the single-page
+    # documents of the table group.
+    stats = run["report"].get("aggregate_stats", {})
+    return stats.get("latency_ms_per_page") or stats.get("latency_ms") or {}
 
 
 def _float(v) -> float | None:
