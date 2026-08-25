@@ -62,18 +62,25 @@ def combine_reps(runs: list[dict]) -> dict:
     if not runs:
         raise ValueError("combine_reps needs at least one run")
 
-    p50s = [_latency_stats(r).get("p50") for r in runs]
+    # A repetition whose evaluation covered fewer documents (a truncated
+    # evaluation pass) is excluded from aggregation: its aggregates describe
+    # a different subset. rep_doc_counts records what each repetition covered.
+    counts = [len(r["docs"]) for r in runs]
+    full = [r for r in runs if len(r["docs"]) == max(counts)]
+
+    p50s = [_latency_stats(r).get("p50") for r in full]
     target = median([p for p in p50s if p is not None])
     reference = min(
-        runs,
+        full,
         key=lambda r: abs((_latency_stats(r).get("p50") or 0) - (target or 0)),
     )
     gtrms = {r["report"]["aggregate_metrics"].get("avg_grits_trm_composite")
-             for r in runs}
+             for r in full}
     return {
         "reference": reference,
-        "runs": runs,
+        "runs": full,
         "repetitions": len(runs),
+        "rep_doc_counts": counts,
         "deterministic": len(gtrms) == 1,
     }
 
@@ -89,6 +96,7 @@ def quality_block(combined: dict, source: str) -> dict:
         "table_record_match": _round2(_scale100(metrics.get("avg_table_record_match"))),
         "docs_scored": report.get("successful"),
         "deterministic": combined["deterministic"],
+        "rep_doc_counts": combined["rep_doc_counts"],
     }
 
 
