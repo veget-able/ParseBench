@@ -9,8 +9,10 @@ Measurement rules baked in:
   per-document latency is meaningful.
 * Repetitions are interleaved A/B/A/B across pipelines inside the same
   session, so machine noise cancels in the ratio even off the pinned runner.
-* Per-document latency is the median across repetitions; quality must be
-  identical across repetitions and the summary records whether it was.
+* Aggregates are ParseBench's own (_evaluation_report.json); across
+  repetitions the median of each official stat is taken, per-document rows
+  come from the median repetition unchanged, and quality must be identical
+  across repetitions (the summary records whether it was).
 
 Usage (from the repo root, config listing the pipelines and their venvs):
 
@@ -72,9 +74,9 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
             collect.load_run(work / f"rep{rep}" / pid / spec["parse_bench_pipeline"])
             for rep in range(reps)
         ]
-        merged = collect.merge_reps(runs)
+        merged = collect.combine_reps(runs)
         merged_by_pipeline[pid] = merged
-        summary["run"]["dataset"]["docs"] = len(merged["docs"])
+        summary["run"]["dataset"]["docs"] = len(merged["reference"]["docs"])
 
         summary["pipelines"][pid] = {
             "label": spec["label"],

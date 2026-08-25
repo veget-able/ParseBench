@@ -10,9 +10,14 @@ what an unmodified checkout produces.
 
 | Section | Metrics | How |
 |---|---|---|
-| quality | GTRM (`grits_trm_composite`), GriTS content, TableRecordMatch, determinism | ParseBench's own per-document CSV, unmodified scoring |
-| performance | seconds/page (median, p95, mean), pages/min, cold start (import + first document), peak RSS, ratio vs baseline | per-document `latency_ms_per_page` from ParseBench; RSS sampled via psutil; cold start in fresh subprocesses |
+| quality | GTRM (`avg_grits_trm_composite`), GriTS content, TableRecordMatch, determinism | lifted verbatim from ParseBench's `_evaluation_report.json` aggregates |
+| performance | seconds/page (p50, p95, mean), pages/min, cold start (import + first document), peak RSS, ratio vs baseline | ParseBench's own `aggregate_stats.latency_ms_per_page`; RSS sampled via psutil; cold start in fresh subprocesses |
 | footprint | installed MB, download MB, transitive dependency count, install seconds | throwaway venv per pipeline |
+
+The harness performs no re-aggregation of ParseBench data: quality and
+latency aggregates are ParseBench's own numbers, the only cross-run
+arithmetic is the median across repetitions, and per-document rows are
+the unmodified rows of the median repetition.
 
 ## Result layout
 
@@ -49,8 +54,8 @@ benchpage.coldstart --help`, `python -m benchpage.footprint --help`).
 * `--max_concurrent 1` always (hardcoded). The sequential path is the only
   one whose per-document latency is meaningful.
 * Repetitions interleave pipelines A/B/A/B in the same session, so machine
-  noise cancels in the ratio; per-document latency is the median across
-  repetitions.
+  noise cancels in the ratio; each official latency stat is reported as
+  its median across repetitions.
 * Quality must be identical across repetitions; `deterministic` in the
   summary records whether it was.
 * Cold start requires model files already on disk (run each tool once

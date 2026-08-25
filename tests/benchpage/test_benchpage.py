@@ -28,6 +28,26 @@ def _fake_run_dir(tmp_path: Path, name: str, latencies: list[float]) -> Path:
     (d / "_summary.json").write_text(json.dumps({
         "total": len(latencies), "successful": len(latencies), "failed": 0,
     }), encoding="utf-8")
+    xs = sorted(latencies)
+    (d / "_evaluation_report.json").write_text(json.dumps({
+        "total_examples": len(latencies),
+        "successful": len(latencies),
+        "failed": 0,
+        "aggregate_metrics": {
+            "avg_grits_trm_composite": 0.72,
+            "avg_grits_con": 0.9,
+            "avg_table_record_match": 0.8,
+        },
+        "aggregate_stats": {
+            "latency_ms_per_page": {
+                "avg": sum(xs) / len(xs),
+                "p50": xs[len(xs) // 2],
+                "p95": xs[-1],
+                "count": len(xs),
+                "unit": "ms/page",
+            }
+        },
+    }), encoding="utf-8")
     rows = [
         f'table/doc{i},table/doc{i},pymupdf4llm_markdown,parse,True,,"table,easy",'
         f"{ms},{ms},0.9,0.72,1.0,0.8\n"
@@ -38,24 +58,28 @@ def _fake_run_dir(tmp_path: Path, name: str, latencies: list[float]) -> Path:
     return d
 
 
-def test_collect_merge_and_aggregate(tmp_path):
+def test_collect_uses_official_aggregates(tmp_path):
     r1 = collect.load_run(_fake_run_dir(tmp_path, "rep0", [100.0, 200.0]))
     r2 = collect.load_run(_fake_run_dir(tmp_path, "rep1", [300.0, 400.0]))
-    merged = collect.merge_reps([r1, r2])
+    combined = collect.combine_reps([r1, r2])
 
-    assert merged["repetitions"] == 2
-    assert merged["deterministic"] is True
-    # median of [100, 300] = 200 ms -> 0.2 s/page for doc0
-    assert merged["docs"][0]["latency_ms_per_page"] == 200.0
+    assert combined["repetitions"] == 2
+    assert combined["deterministic"] is True
 
-    q = collect.quality_block(merged, SOURCE_MEASURED)
-    assert q["gtrm"] == 72.0  # 0.72 scaled to leaderboard scale
+    q = collect.quality_block(combined, SOURCE_MEASURED)
+    assert q["gtrm"] == 72.0          # official avg_grits_trm_composite, 0-100 scale
     assert q["docs_scored"] == 2
 
-    p = collect.performance_block(merged, SOURCE_MEASURED, peak_rss_mb=123.4)
-    assert p["s_per_page"]["median"] == 0.25
-    assert p["pages_per_min"] == 240.0
+    p = collect.performance_block(combined, SOURCE_MEASURED, peak_rss_mb=123.4)
+    # official p50s are 200 and 400 ms; median across reps -> 0.3 s/page
+    assert p["s_per_page"]["median"] == 0.3
+    assert p["s_per_page"]["p95"] == 0.3   # median of 200 and 400 ms p95s
+    assert p["pages_per_min"] == 200.0
     assert p["peak_rss_mb"] == 123.4
+
+    rows = collect.document_rows({"pymupdf4llm": combined})
+    assert len(rows) == 2
+    assert rows[0]["pipelines"]["pymupdf4llm"]["success"] is True
 
 
 def test_emit_round_trip(tmp_path):
