@@ -26,6 +26,7 @@
       "label": "Docling",
       "category": "local",
       "parse_bench_pipeline": "docling_serve",
+      "parse_bench_cmd": [".venvs/pymupdf4llm/Scripts/parse-bench.exe"],
       "env": {"DOCLING_SERVE_ENDPOINT_URL": "http://localhost:5001"},
       "python": ".venvs/docling/Scripts/python.exe",
       "versions": {

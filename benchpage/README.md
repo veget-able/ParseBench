@@ -76,9 +76,12 @@ sides of the pair are unmodified upstream code. The runner starts
 docling-serve on the same machine before the run; Docling's latency
 therefore includes a localhost HTTP hop, recorded here as a caveat, while
 cold start and footprint measure the docling library directly in its own
-venv. Note the published leaderboard's "Docling-models" row was produced
-via the `docling_parse` pipeline against a hosted inference endpoint; the
-scoring code downstream of the provider is the same.
+venv. Because the docling venv only hosts the server, the docling entry
+sets `parse_bench_cmd` to the shared parse-bench venv's CLI (the provider
+is an HTTP client and needs no docling packages). Note the published
+leaderboard's "Docling-models" row was produced via the `docling_parse`
+pipeline against a hosted inference endpoint; the scoring code downstream
+of the provider is the same.
 
 ## Follow-ups
 
