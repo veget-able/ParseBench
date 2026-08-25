@@ -1,0 +1,93 @@
+"""Round-trip smoke tests for the benchpage harness (no ParseBench run needed)."""
+
+import json
+from pathlib import Path
+
+from benchpage import collect
+from benchpage.emit import write_run
+from benchpage.schema import (
+    SOURCE_MEASURED,
+    summary_skeleton,
+    validate_summary,
+)
+
+CSV_HEADER = (
+    "test_id,example_id,pipeline_name,product_type,success,error,tags,"
+    "latency_ms,latency_ms_per_page,grits_con,grits_trm_composite,"
+    "structural_consistency,table_record_match\n"
+)
+
+
+def _fake_run_dir(tmp_path: Path, name: str, latencies: list[float]) -> Path:
+    d = tmp_path / name / "pymupdf4llm_markdown"
+    d.mkdir(parents=True)
+    (d / "_metadata.json").write_text(json.dumps({
+        "pipeline": {"pipeline_name": "pymupdf4llm_markdown"},
+        "run_config": {"max_concurrent": 1},
+    }), encoding="utf-8")
+    (d / "_summary.json").write_text(json.dumps({
+        "total": len(latencies), "successful": len(latencies), "failed": 0,
+    }), encoding="utf-8")
+    rows = [
+        f'table/doc{i},table/doc{i},pymupdf4llm_markdown,parse,True,,"table,easy",'
+        f"{ms},{ms},0.9,0.72,1.0,0.8\n"
+        for i, ms in enumerate(latencies)
+    ]
+    (d / "_evaluation_results.csv").write_text(CSV_HEADER + "".join(rows),
+                                               encoding="utf-8")
+    return d
+
+
+def test_collect_merge_and_aggregate(tmp_path):
+    r1 = collect.load_run(_fake_run_dir(tmp_path, "rep0", [100.0, 200.0]))
+    r2 = collect.load_run(_fake_run_dir(tmp_path, "rep1", [300.0, 400.0]))
+    merged = collect.merge_reps([r1, r2])
+
+    assert merged["repetitions"] == 2
+    assert merged["deterministic"] is True
+    # median of [100, 300] = 200 ms -> 0.2 s/page for doc0
+    assert merged["docs"][0]["latency_ms_per_page"] == 200.0
+
+    q = collect.quality_block(merged, SOURCE_MEASURED)
+    assert q["gtrm"] == 72.0  # 0.72 scaled to leaderboard scale
+    assert q["docs_scored"] == 2
+
+    p = collect.performance_block(merged, SOURCE_MEASURED, peak_rss_mb=123.4)
+    assert p["s_per_page"]["median"] == 0.25
+    assert p["pages_per_min"] == 240.0
+    assert p["peak_rss_mb"] == 123.4
+
+
+def test_emit_round_trip(tmp_path):
+    summary = summary_skeleton("20990101-test")
+    summary["run"].update(started="2099-01-01T00:00:00Z",
+                          dataset={"group": "table", "docs": 2},
+                          llm_normalization=False, repetitions=1)
+    summary["pipelines"]["pymupdf4llm"] = {
+        "label": "PyMuPDF", "category": "local", "versions": {},
+        "fee_per_1k_pages": None, "lock_sha256": None,
+    }
+    summary["quality"]["table"] = {
+        "pymupdf4llm": {"source": "measured", "gtrm": 72.0, "grits_con": 90.0,
+                        "table_record_match": 80.0, "docs_scored": 2,
+                        "deterministic": True},
+    }
+    summary["performance"]["pymupdf4llm"] = {
+        "source": "measured",
+        "s_per_page": {"median": 0.25, "p95": 0.4, "mean": 0.25},
+        "pages_per_min": 240.0, "cold_start_s": None, "peak_rss_mb": None,
+    }
+    assert validate_summary(summary) == []
+
+    run_dir = write_run(tmp_path / "results", summary,
+                        [{"doc": "table/doc0", "tags": "table", "pipelines": {}}])
+    assert (run_dir / "summary.json").exists()
+    index = json.loads((tmp_path / "results" / "index.json").read_text())
+    assert index[0]["run_id"] == "20990101-test"
+
+
+def test_validate_rejects_unknown_pipeline():
+    summary = summary_skeleton("x")
+    summary["run"].update(started="2099-01-01T00:00:00Z")
+    summary["performance"]["ghost"] = {"source": "measured"}
+    assert any("unknown pipeline" in p for p in validate_summary(summary))

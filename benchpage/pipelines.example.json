@@ -1,0 +1,43 @@
+{
+  "baseline": "pymupdf4llm",
+  "llm_normalization": false,
+  "pipelines": [
+    {
+      "id": "pymupdf4llm",
+      "label": "PyMuPDF · layout + HTML tables",
+      "category": "local",
+      "parse_bench_pipeline": "pymupdf4llm_markdown",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {
+        "pymupdf": "1.28.2",
+        "pymupdf4llm": "1.28.2",
+        "pymupdf-layout": "1.28.2"
+      },
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "import pymupdf4llm",
+        "first_doc_expr": "pymupdf4llm.to_markdown(DOC)",
+        "doc": "data/sample/coldstart.pdf"
+      },
+      "footprint_packages": ["pymupdf4llm==1.28.2"]
+    },
+    {
+      "id": "docling",
+      "label": "Docling",
+      "category": "local",
+      "parse_bench_pipeline": "docling",
+      "python": ".venvs/docling/Scripts/python.exe",
+      "versions": {
+        "docling": "2.121.0"
+      },
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from docling.document_converter import DocumentConverter",
+        "first_doc_expr": "DocumentConverter().convert(DOC).document.export_to_markdown()",
+        "doc": "data/sample/coldstart.pdf"
+      },
+      "footprint_packages": ["docling"],
+      "footprint_extra_index_url": "https://download.pytorch.org/whl/cpu"
+    }
+  ]
+}

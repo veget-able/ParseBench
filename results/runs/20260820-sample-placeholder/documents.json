@@ -1,0 +1,16 @@
+[
+ {
+  "doc": "table/sample_doc_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {"gtrm": 100.0, "s_per_page": 0.21, "success": true}
+  }
+ },
+ {
+  "doc": "table/sample_doc_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {"gtrm": 66.7, "s_per_page": 0.74, "success": true}
+  }
+ }
+]

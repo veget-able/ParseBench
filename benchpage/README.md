@@ -1,0 +1,70 @@
+# benchpage — measurement harness for the public PyMuPDF benchmark page
+
+This directory produces the JSON consumed by the live benchmark section on
+pymupdf.io (and by embeds of it, e.g. the Speed section of
+`/compare/docling`). It wraps the stock `parse-bench` CLI as a subprocess
+and never modifies ParseBench itself, so the quality numbers are exactly
+what an unmodified checkout produces.
+
+## What gets measured
+
+| Section | Metrics | How |
+|---|---|---|
+| quality | GTRM (`grits_trm_composite`), GriTS content, TableRecordMatch, determinism | ParseBench's own per-document CSV, unmodified scoring |
+| performance | seconds/page (median, p95, mean), pages/min, cold start (import + first document), peak RSS, ratio vs baseline | per-document `latency_ms_per_page` from ParseBench; RSS sampled via psutil; cold start in fresh subprocesses |
+| footprint | installed MB, download MB, transitive dependency count, install seconds | throwaway venv per pipeline |
+
+## Result layout
+
+```
+results/index.json                   run manifest (history, newest first)
+results/runs/<run_id>/summary.json   everything the page needs on first load
+results/runs/<run_id>/documents.json per-document detail, loaded lazily
+```
+
+`summary.json` is keyed by stable pipeline ids throughout, so an embed can
+slice out a two-parser subset without re-aggregating. Every metric block
+carries `"source": "measured" | "placeholder"`. Schema reference and
+validation live in `schema.py`; `emit.write_run` refuses to write an
+invalid summary. The checked-in run `20260820-sample-placeholder` is an
+illustrative schema demo only and will be replaced by the first run from
+the pinned runner.
+
+## Running
+
+Each pipeline runs from its own venv (clean installs, no cross
+contamination). Describe them in a config, then:
+
+```
+python -m benchpage.run_bench --config benchpage/pipelines.example.json \
+    --group table --reps 3 --results-dir results --label weekly
+```
+
+Cold start and footprint are slower and opt-in via `--with-coldstart` and
+`--with-footprint`; both also work standalone (`python -m
+benchpage.coldstart --help`, `python -m benchpage.footprint --help`).
+
+## Measurement rules
+
+* `--max_concurrent 1` always (hardcoded). The sequential path is the only
+  one whose per-document latency is meaningful.
+* Repetitions interleave pipelines A/B/A/B in the same session, so machine
+  noise cancels in the ratio; per-document latency is the median across
+  repetitions.
+* Quality must be identical across repetitions; `deterministic` in the
+  summary records whether it was.
+* Cold start requires model files already on disk (run each tool once
+  first) so the network is never inside the timed path.
+* Absolute times are comparable across runs only from the pinned runner
+  (fixed instance type, set `BENCH_INSTANCE_TYPE`; never a burstable
+  t-family instance). Ratios are meaningful anywhere.
+* Provenance travels with every run: ParseBench commit, per-venv
+  `pip freeze` hash, instance/CPU/OS/Python, and the LLM-normalization
+  setting (off by default since upstream #107).
+
+## Follow-ups
+
+* A `docling` provider/pipeline does not exist upstream yet; the example
+  config lists it to fix the target shape for the compare-page embed.
+* Start-run-stop workflow for the pinned AWS runner (schedule/dispatch
+  triggered only; no PR-triggered execution on the self-hosted runner).
