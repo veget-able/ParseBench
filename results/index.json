@@ -1,5 +1,14 @@
 [
  {
+  "run_id": "20260825-devbox-r1",
+  "started": "2026-08-25T13:42:05Z",
+  "label": "dev-box-r1",
+  "files": {
+   "summary": "runs/20260825-devbox-r1/summary.json",
+   "documents": "runs/20260825-devbox-r1/documents.json"
+  }
+ },
+ {
   "run_id": "20260820-sample-placeholder",
   "started": "2026-08-20T00:00:00Z",
   "label": "schema-sample",

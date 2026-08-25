@@ -1,0 +1,92 @@
+{
+ "schema_version": 1,
+ "run": {
+  "id": "20260825-devbox-r1",
+  "started": "2026-08-25T13:42:05Z",
+  "parsebench_commit": "3a1388f",
+  "dataset": {
+   "group": "table",
+   "docs": 503
+  },
+  "llm_normalization": false,
+  "repetitions": 1
+ },
+ "env": {
+  "instance": null,
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "ram_gb": 63.6,
+  "os": "Windows 11",
+  "python": "3.12.11"
+ },
+ "pipelines": {
+  "pymupdf4llm": {
+   "label": "PyMuPDF · layout + HTML tables",
+   "category": "local",
+   "versions": {
+    "pymupdf": "1.28.2",
+    "pymupdf4llm": "1.28.2",
+    "pymupdf-layout": "1.28.2"
+   },
+   "fee_per_1k_pages": null,
+   "lock_sha256": "5a15b027ec76881926e46894b57843b249b2250510a9ed3f110323573043eb9a"
+  },
+  "docling": {
+   "label": "Docling",
+   "category": "local",
+   "versions": {
+    "docling-serve": "1.31.0",
+    "docling": "2.122.0 (slim)",
+    "torch": "2.13.0+cpu"
+   },
+   "fee_per_1k_pages": null,
+   "lock_sha256": "e6d2fb79e3b8c670321d80a12bffb5af0d60c87e119e5384ebcf2ccd46ae8091"
+  }
+ },
+ "quality": {
+  "table": {
+   "pymupdf4llm": {
+    "source": "measured",
+    "gtrm": 72.0,
+    "grits_con": 81.11,
+    "table_record_match": 60.14,
+    "docs_scored": 503,
+    "deterministic": true
+   },
+   "docling": {
+    "source": "measured",
+    "gtrm": 67.42,
+    "grits_con": 75.41,
+    "table_record_match": 58.06,
+    "docs_scored": 503,
+    "deterministic": true
+   }
+  }
+ },
+ "performance": {
+  "pymupdf4llm": {
+   "source": "measured",
+   "s_per_page": {
+    "median": 1.325,
+    "p95": 3.082,
+    "mean": 1.4959
+   },
+   "pages_per_min": 45.28,
+   "cold_start_s": null,
+   "peak_rss_mb": null,
+   "ratio_vs_baseline": 1.0
+  },
+  "docling": {
+   "source": "measured",
+   "s_per_page": {
+    "median": 4.04,
+    "p95": 14.13,
+    "mean": 5.3331
+   },
+   "pages_per_min": 14.85,
+   "cold_start_s": null,
+   "peak_rss_mb": null,
+   "ratio_vs_baseline": 3.049
+  }
+ },
+ "footprint": {}
+}

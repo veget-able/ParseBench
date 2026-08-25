@@ -1,0 +1,8050 @@
+[
+ {
+  "doc": "table/0000027_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 47.84,
+    "s_per_page": 4.017,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 68.4,
+    "s_per_page": 12.221,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1 timetable (1)_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.813,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 72.61,
+    "s_per_page": 14.117,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1 timetable (1)_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.274,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 45.45,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1 timetable (1)_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 86.54,
+    "s_per_page": 1.641,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 58.22,
+    "s_per_page": 12.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1 timetable (1)_page7",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.826,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 62.23,
+    "s_per_page": 12.123,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1212.1661v1_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 75.62,
+    "s_per_page": 1.531,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.15,
+    "s_per_page": 6.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/13_axa_world_funds_page59",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.21,
+    "s_per_page": 1.626,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.41,
+    "s_per_page": 4.055,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/15_blackrock_strategic_funds_page29",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.72,
+    "s_per_page": 1.325,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 84.69,
+    "s_per_page": 6.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 3.61,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.22,
+    "s_per_page": 4.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.022,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.25,
+    "s_per_page": 2.052,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.205,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.61,
+    "s_per_page": 2.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page4",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.069,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.26,
+    "s_per_page": 2.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.818,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.27,
+    "s_per_page": 2.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 85.0,
+    "s_per_page": 0.747,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.61,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 95.81,
+    "s_per_page": 0.72,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.43,
+    "s_per_page": 2.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page8",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.214,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.39,
+    "s_per_page": 2.052,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1634690602_page9",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.356,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.12,
+    "s_per_page": 2.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.771,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 3.34,
+    "s_per_page": 2.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page34",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 23.73,
+    "s_per_page": 1.217,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.7,
+    "s_per_page": 4.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page36",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.723,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 39.94,
+    "s_per_page": 4.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page37",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 98.57,
+    "s_per_page": 1.455,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.57,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page39",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.212,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 71.14,
+    "s_per_page": 6.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page40",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.844,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 81.32,
+    "s_per_page": 4.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1653739079_page41",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.22,
+    "s_per_page": 2.192,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 70.95,
+    "s_per_page": 4.011,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page14",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.16,
+    "s_per_page": 0.936,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.56,
+    "s_per_page": 4.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page19",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.998,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.63,
+    "s_per_page": 2.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page26",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.22,
+    "s_per_page": 1.045,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.81,
+    "s_per_page": 2.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page40",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.229,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.53,
+    "s_per_page": 4.071,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.205,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.28,
+    "s_per_page": 2.019,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1657221585_page62",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.221,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.62,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1948bb0c-01f1-aa67-a1bd-4d54323f4f0d_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 68.45,
+    "s_per_page": 3.291,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 34.2,
+    "s_per_page": 14.106,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/1H-2025-Global-Catastrophe-Recap_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.727,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.019,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/2023-conocophillips-aim-presentation (1)_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 3.386,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.47,
+    "s_per_page": 12.088,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/2023.02.07 Walmart Settlement Agreement_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.464,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/2023.02.07 Walmart Settlement Agreement_page300",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.75,
+    "s_per_page": 0.969,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.97,
+    "s_per_page": 4.023,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/20230125-weather-climate-catastrophe-insight_page9",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 77.22,
+    "s_per_page": 0.924,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/20250401_Axos_Bank_SFR_Correspondent_Rate_Sheet_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 7.83,
+    "s_per_page": 2.124,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.28,
+    "s_per_page": 16.13,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.74,
+    "s_per_page": 3.695,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.71,
+    "s_per_page": 6.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page11",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.96,
+    "s_per_page": 0.799,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.96,
+    "s_per_page": 2.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page12",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 89.99,
+    "s_per_page": 1.69,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 89.99,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page13",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.98,
+    "s_per_page": 0.807,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.9,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page14",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.196,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.81,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page21",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.98,
+    "s_per_page": 0.878,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.98,
+    "s_per_page": 2.017,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page22",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.913,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.83,
+    "s_per_page": 2.055,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page23",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.294,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.18,
+    "s_per_page": 2.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page24",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.262,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page25",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.99,
+    "s_per_page": 0.949,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.95,
+    "s_per_page": 2.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page26",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 90.91,
+    "s_per_page": 1.314,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 90.91,
+    "s_per_page": 2.068,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 93.33,
+    "s_per_page": 0.861,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.12,
+    "s_per_page": 2.023,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/203924_fb04e77929bf4bbc93dbd659653a4f01_page28",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.99,
+    "s_per_page": 1.266,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.99,
+    "s_per_page": 2.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.059,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page21",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.652,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 8.8,
+    "s_per_page": 4.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page22",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.39,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 86.51,
+    "s_per_page": 4.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page28",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 95.82,
+    "s_per_page": 1.468,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.56,
+    "s_per_page": 4.071,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page3",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 62.58,
+    "s_per_page": 1.826,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 63.31,
+    "s_per_page": 10.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page4",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 57.59,
+    "s_per_page": 2.265,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 69.71,
+    "s_per_page": 10.099,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/222876fb_page5",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 51.79,
+    "s_per_page": 2.185,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.34,
+    "s_per_page": 8.108,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/245804406-CV-Nevers-signé-EX_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 98.16,
+    "s_per_page": 0.863,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.95,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/245804406-CV-Nevers-signé-EX_page60",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.26,
+    "s_per_page": 2.169,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 62.52,
+    "s_per_page": 6.08,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/637951191e7b35ae07dbd4c76a2e6690c370_pg2_pg1_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 12.34,
+    "s_per_page": 1.932,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 6.02,
+    "s_per_page": 24.149,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/7b9c8208-d2be-2a81-8a15-215a9a5a26e8_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 40.43,
+    "s_per_page": 1.379,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 30.03,
+    "s_per_page": 6.085,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/7bbe366d-1e09-b2c3-e969-c45940fc5d71_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 43.12,
+    "s_per_page": 3.294,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 44.72,
+    "s_per_page": 12.154,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AMZN.2005.page_32.pdf_61783_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 34.67,
+    "s_per_page": 0.992,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.5,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AONR32314_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 24.31,
+    "s_per_page": 2.299,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 86.43,
+    "s_per_page": 8.092,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AONR32314_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 75.76,
+    "s_per_page": 3.227,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.2,
+    "s_per_page": 6.087,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page100",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.384,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.016,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page101",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 68.1,
+    "s_per_page": 0.514,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 84.41,
+    "s_per_page": 2.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page103",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.428,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page105",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.89,
+    "s_per_page": 0.651,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.67,
+    "s_per_page": 1.998,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page47",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 59.44,
+    "s_per_page": 1.08,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.12,
+    "s_per_page": 4.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page48",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.898,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.36,
+    "s_per_page": 2.003,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page57",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.453,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page60",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 53.77,
+    "s_per_page": 1.219,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.5,
+    "s_per_page": 4.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page62",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.551,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page78",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 87.5,
+    "s_per_page": 0.76,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page80",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.488,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page89",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 73.33,
+    "s_per_page": 0.528,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.33,
+    "s_per_page": 2.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page90",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.602,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/AZ LIC Rate Tables 2.0.v2_page93",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.628,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.956,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 6.076,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page22",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.055,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 78.57,
+    "s_per_page": 2.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page23",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 76.01,
+    "s_per_page": 0.971,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.43,
+    "s_per_page": 2.059,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page25",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.74,
+    "s_per_page": 1.286,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.74,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page26",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.6,
+    "s_per_page": 0.935,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.6,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.625,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 88.12,
+    "s_per_page": 4.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page28",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.477,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.016,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 69.35,
+    "s_per_page": 1.042,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.68,
+    "s_per_page": 4.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page30",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.633,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page43",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 51.85,
+    "s_per_page": 1.665,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.56,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page45",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.451,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 88.5,
+    "s_per_page": 4.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page50",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 85.56,
+    "s_per_page": 1.458,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page51",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 28.03,
+    "s_per_page": 0.574,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 24.17,
+    "s_per_page": 2.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page57",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 75.0,
+    "s_per_page": 2.171,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page59",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 50.0,
+    "s_per_page": 1.186,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Apple 10-k_page76",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.353,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1002",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 91.13,
+    "s_per_page": 0.53,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1017",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.734,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1028",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.571,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.019,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1087",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.203,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.23,
+    "s_per_page": 12.153,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1100",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.487,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1103",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.06,
+    "s_per_page": 0.851,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.06,
+    "s_per_page": 2.017,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1110",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 3.061,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 4.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1112",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 3.398,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 4.069,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1113",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 4.503,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 16.37,
+    "s_per_page": 12.073,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1121",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 1.097,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1123",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 2.304,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.271,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1171",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.85,
+    "s_per_page": 2.344,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.026,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1210",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 22.23,
+    "s_per_page": 1.351,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.02,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1240",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.554,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.024,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1419",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 1.89,
+    "s_per_page": 1.848,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page1420",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 3.16,
+    "s_per_page": 1.35,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 40.58,
+    "s_per_page": 1.231,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.13,
+    "s_per_page": 4.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page834",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 49.61,
+    "s_per_page": 2.283,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 31.41,
+    "s_per_page": 14.12,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page835",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 4.07,
+    "s_per_page": 1.58,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.26,
+    "s_per_page": 12.098,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page836",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.607,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 15.19,
+    "s_per_page": 4.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page837",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.5,
+    "s_per_page": 1.536,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 27.99,
+    "s_per_page": 2.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page838",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 26.38,
+    "s_per_page": 0.419,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 34.21,
+    "s_per_page": 4.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page839",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 46.42,
+    "s_per_page": 3.212,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 4.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page841",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 81.95,
+    "s_per_page": 5.42,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.083,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page851",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.557,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 33.33,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page852",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.438,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page853",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 37.57,
+    "s_per_page": 1.509,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.07,
+    "s_per_page": 10.098,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page874",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.367,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 1.2,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page875",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.335,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 40.42,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page877",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 11.32,
+    "s_per_page": 5.949,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 25.0,
+    "s_per_page": 4.072,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page938",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.67,
+    "s_per_page": 1.4,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 41.78,
+    "s_per_page": 22.137,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page953",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 90.44,
+    "s_per_page": 0.404,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 76.19,
+    "s_per_page": 2.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page987",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 80.21,
+    "s_per_page": 2.821,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 41.91,
+    "s_per_page": 24.152,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BRWS-134565917_page990",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 68.44,
+    "s_per_page": 1.28,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.19,
+    "s_per_page": 12.07,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BSC-Hospital-List-by-County (2)_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 19.46,
+    "s_per_page": 4.562,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 47.0,
+    "s_per_page": 12.203,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/BXP.2008.page_112.pdf_57116_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 91.67,
+    "s_per_page": 0.923,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.58,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/CINF.2006.page_93.pdf_140594_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 90.0,
+    "s_per_page": 2.765,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.82,
+    "s_per_page": 12.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.169,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page107",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 83.38,
+    "s_per_page": 1.007,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.15,
+    "s_per_page": 4.242,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page30",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.94,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page39",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.494,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page48",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.76,
+    "s_per_page": 1.419,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 62.46,
+    "s_per_page": 2.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page49",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.112,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page50",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 87.44,
+    "s_per_page": 1.363,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.44,
+    "s_per_page": 2.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page51",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.012,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Coca Cola 10-k_page68",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 13.03,
+    "s_per_page": 1.353,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 74.55,
+    "s_per_page": 4.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Cost_Estimating_Guideline (1)_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.649,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.69,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Cost_Estimating_Guideline (1)_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 73.15,
+    "s_per_page": 1.351,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.39,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Cost_Estimating_Guideline (1)_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.431,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.023,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DLR.2004.page_61.pdf_21918_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 46.99,
+    "s_per_page": 1.805,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.88,
+    "s_per_page": 6.07,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page13",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 44.7,
+    "s_per_page": 0.795,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 76.18,
+    "s_per_page": 6.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page15",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 36.85,
+    "s_per_page": 2.529,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.81,
+    "s_per_page": 6.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.316,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.072,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page4",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 95.41,
+    "s_per_page": 1.784,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.74,
+    "s_per_page": 8.083,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.56,
+    "s_per_page": 1.782,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.02,
+    "s_per_page": 6.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/DS5795A-06_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 54.43,
+    "s_per_page": 2.81,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 53.39,
+    "s_per_page": 6.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Earnings Presentation (FY26 Q2)_page22",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 11.63,
+    "s_per_page": 1.486,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 23.33,
+    "s_per_page": 4.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.345,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.69,
+    "s_per_page": 2.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page106",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.0,
+    "s_per_page": 1.506,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 14.34,
+    "s_per_page": 8.107,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page11",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.76,
+    "s_per_page": 0.608,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.76,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page110",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.084,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page112",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 46.2,
+    "s_per_page": 1.966,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 7.04,
+    "s_per_page": 2.062,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page113",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 55.18,
+    "s_per_page": 1.048,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.02,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page114",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.38,
+    "s_per_page": 0.235,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.83,
+    "s_per_page": 2.014,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page115",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 69.14,
+    "s_per_page": 2.039,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 21.04,
+    "s_per_page": 24.178,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page122",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.55,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page14",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 52.36,
+    "s_per_page": 1.838,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 38.61,
+    "s_per_page": 8.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page147",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 78.75,
+    "s_per_page": 1.903,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page15",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 94.29,
+    "s_per_page": 1.014,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.0,
+    "s_per_page": 8.08,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page154",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.612,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 63.34,
+    "s_per_page": 10.09,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page16",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 53.45,
+    "s_per_page": 0.511,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.83,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page162",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 49.8,
+    "s_per_page": 1.832,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.77,
+    "s_per_page": 6.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page163",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.25,
+    "s_per_page": 0.079,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page18",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.87,
+    "s_per_page": 1.629,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 55.26,
+    "s_per_page": 24.142,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page19",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.049,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 34.15,
+    "s_per_page": 14.13,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page43",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 20.0,
+    "s_per_page": 0.624,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 20.0,
+    "s_per_page": 2.038,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page44",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.26,
+    "s_per_page": 1.432,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 65.31,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page46",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 76.18,
+    "s_per_page": 1.501,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.58,
+    "s_per_page": 8.075,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.223,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.386,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page62",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 89.23,
+    "s_per_page": 1.411,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.52,
+    "s_per_page": 8.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page63",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 62.43,
+    "s_per_page": 1.769,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.45,
+    "s_per_page": 10.083,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page8",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 21.08,
+    "s_per_page": 0.456,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.4,
+    "s_per_page": 2.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page84",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.422,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.43,
+    "s_per_page": 14.118,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page88",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.798,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.06,
+    "s_per_page": 6.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page98",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 59.12,
+    "s_per_page": 1.773,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.11,
+    "s_per_page": 14.086,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/FBLB-134215544_page99",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 28.98,
+    "s_per_page": 0.215,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 30.44,
+    "s_per_page": 2.005,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.662,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page106",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 61.86,
+    "s_per_page": 1.723,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 47.77,
+    "s_per_page": 4.038,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page107",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 53.27,
+    "s_per_page": 1.213,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 88.46,
+    "s_per_page": 4.007,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page113",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.909,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 44.95,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page118",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 78.48,
+    "s_per_page": 1.739,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.19,
+    "s_per_page": 8.099,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page122",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.883,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.81,
+    "s_per_page": 4.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page136",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.95,
+    "s_per_page": 1.101,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.36,
+    "s_per_page": 6.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page137",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.315,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.55,
+    "s_per_page": 6.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page411",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.8,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.02,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page432",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.034,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page433",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.86,
+    "s_per_page": 0.969,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page74",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.63,
+    "s_per_page": 2.169,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 47.08,
+    "s_per_page": 6.08,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page79",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.95,
+    "s_per_page": 1.938,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 47.75,
+    "s_per_page": 4.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page84",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.368,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 65.65,
+    "s_per_page": 6.059,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page85",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.665,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 51.9,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Goldman Sachs 10-k_page94",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.427,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 71.33,
+    "s_per_page": 4.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page106",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.485,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.977,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.79,
+    "s_per_page": 4.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page31",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 72.18,
+    "s_per_page": 2.036,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 72.18,
+    "s_per_page": 4.059,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page33",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 88.44,
+    "s_per_page": 1.737,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 75.0,
+    "s_per_page": 6.075,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page45",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.46,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page46",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 98.4,
+    "s_per_page": 1.478,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page47",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.988,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.92,
+    "s_per_page": 6.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page57",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 83.36,
+    "s_per_page": 1.927,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.3,
+    "s_per_page": 6.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page58",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 77.67,
+    "s_per_page": 2.059,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.5,
+    "s_per_page": 4.09,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page71",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.26,
+    "s_per_page": 1.522,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 68.77,
+    "s_per_page": 4.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Home Depot 10-k unrestricted_page72",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 50.75,
+    "s_per_page": 1.436,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 68.51,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/IBM_Annual_Report_2018_page17",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 26.66,
+    "s_per_page": 0.512,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 27.0,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/IBM_Annual_Report_2018_page32",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 80.0,
+    "s_per_page": 2.576,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.86,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/IT.2009.page_74.pdf_78635_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 67.0,
+    "s_per_page": 0.982,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 51.2,
+    "s_per_page": 4.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2008.page_50.pdf_110961_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 59.93,
+    "s_per_page": 1.433,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.29,
+    "s_per_page": 6.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2010.page_167.pdf_111113_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.77,
+    "s_per_page": 1.043,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.38,
+    "s_per_page": 4.015,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2011.page_114.pdf_110685_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 54.22,
+    "s_per_page": 0.973,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.12,
+    "s_per_page": 6.099,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2011.page_82.pdf_110673_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 80.95,
+    "s_per_page": 1.391,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.9,
+    "s_per_page": 4.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2017.page_127.pdf_110920_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.16,
+    "s_per_page": 1.027,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.97,
+    "s_per_page": 4.068,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/JNPR.2018.page_212.pdf_110717_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.65,
+    "s_per_page": 1.688,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.43,
+    "s_per_page": 6.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/KEY.2014.page_103.pdf_98246_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 77.19,
+    "s_per_page": 1.16,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.88,
+    "s_per_page": 8.113,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Kimco-Realty-2023-Annual-Report-Web_page11",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.818,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 50.0,
+    "s_per_page": 2.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Kimco-Realty-2023-Annual-Report-Web_page41",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.87,
+    "s_per_page": 1.119,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.07,
+    "s_per_page": 2.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Kimco-Realty-2023-Annual-Report-Web_page43",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.696,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/LTCprodkitLincolnStateAvailabilty0216_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 45.31,
+    "s_per_page": 2.5,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.3,
+    "s_per_page": 24.134,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/LTCprodkitLincolnStateAvailabilty0216_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 95.05,
+    "s_per_page": 1.203,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.91,
+    "s_per_page": 4.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Layout with Boxes and text_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.209,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.33,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Low-Back-Guideline (1)_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 94.39,
+    "s_per_page": 1.308,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.38,
+    "s_per_page": 2.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/MAP-CategoryI-LON_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 21.41,
+    "s_per_page": 1.581,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 87.47,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/MAP-CategoryI-LON_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 21.42,
+    "s_per_page": 1.348,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.38,
+    "s_per_page": 2.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/METLIFE-10Q-20240205 unrestricted_page16",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.89,
+    "s_per_page": 1.437,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.66,
+    "s_per_page": 8.066,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/METLIFE-10Q-20240205 unrestricted_page8",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 29.69,
+    "s_per_page": 1.422,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.97,
+    "s_per_page": 6.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/NEE.2011.page_47.pdf_133659_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.831,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 84.53,
+    "s_per_page": 6.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/NFLX.2005.page_70.pdf_72335_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.96,
+    "s_per_page": 0.887,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.65,
+    "s_per_page": 6.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/PrintableRulesSection_page17",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 21.7,
+    "s_per_page": 2.133,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 16.95,
+    "s_per_page": 24.361,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1020",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.971,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page106",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.845,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 88.49,
+    "s_per_page": 14.086,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1116",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 44.52,
+    "s_per_page": 0.286,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 72.46,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1131",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 61.59,
+    "s_per_page": 1.643,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 86.32,
+    "s_per_page": 6.067,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page115",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 33.44,
+    "s_per_page": 1.58,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.014,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1187",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.491,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1201",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.67,
+    "s_per_page": 1.119,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.9,
+    "s_per_page": 4.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1213",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 24.78,
+    "s_per_page": 1.043,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 59.59,
+    "s_per_page": 4.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1220",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 2.58,
+    "s_per_page": 1.228,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 2.91,
+    "s_per_page": 8.089,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1221",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 35.16,
+    "s_per_page": 0.605,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1226",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 52.78,
+    "s_per_page": 0.553,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1261",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 81.68,
+    "s_per_page": 1.245,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.07,
+    "s_per_page": 6.095,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1262",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 82.31,
+    "s_per_page": 1.672,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.28,
+    "s_per_page": 6.071,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1377",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 46.51,
+    "s_per_page": 1.394,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.071,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1387",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.642,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 76.67,
+    "s_per_page": 4.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1414",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 31.27,
+    "s_per_page": 0.687,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 7.14,
+    "s_per_page": 2.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1423",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 5.02,
+    "s_per_page": 3.28,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1433",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 61.91,
+    "s_per_page": 2.826,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.37,
+    "s_per_page": 28.157,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1434",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.92,
+    "s_per_page": 0.353,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.45,
+    "s_per_page": 4.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1492",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 20.92,
+    "s_per_page": 1.796,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 20.38,
+    "s_per_page": 12.076,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1498",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.504,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1551",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 86.36,
+    "s_per_page": 1.855,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.62,
+    "s_per_page": 22.176,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1634",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.969,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1637",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.32,
+    "s_per_page": 1.311,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 81.13,
+    "s_per_page": 8.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1661",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 54.33,
+    "s_per_page": 0.879,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.066,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page168",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.67,
+    "s_per_page": 0.993,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.1,
+    "s_per_page": 2.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1682",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.39,
+    "s_per_page": 1.686,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.39,
+    "s_per_page": 4.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1724",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 65.04,
+    "s_per_page": 2.532,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 37.16,
+    "s_per_page": 20.171,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1751",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.274,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.48,
+    "s_per_page": 8.08,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page179",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.219,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1800",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.339,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1801",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.12,
+    "s_per_page": 2.2,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 16.35,
+    "s_per_page": 10.085,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1869",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.883,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1870",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.651,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1878",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.74,
+    "s_per_page": 1.07,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.7,
+    "s_per_page": 4.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1915",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.604,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1961",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.71,
+    "s_per_page": 1.322,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 39.88,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page1999",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.21,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2005",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 65.42,
+    "s_per_page": 1.33,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.63,
+    "s_per_page": 6.069,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2024",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.833,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2029",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 94.66,
+    "s_per_page": 1.47,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 60.53,
+    "s_per_page": 6.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page204",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.588,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2069",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 4.915,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.21,
+    "s_per_page": 18.18,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2104",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.127,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 44.86,
+    "s_per_page": 24.155,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2139",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.292,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 74.69,
+    "s_per_page": 6.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page22",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 89.61,
+    "s_per_page": 1.33,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.12,
+    "s_per_page": 6.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page223",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.892,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 1.999,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2248",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 79.97,
+    "s_per_page": 1.678,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 18.7,
+    "s_per_page": 10.091,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2321",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.25,
+    "s_per_page": 0.372,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 83.81,
+    "s_per_page": 2.02,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2323",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 5.48,
+    "s_per_page": 1.628,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2324",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.37,
+    "s_per_page": 0.436,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 97.37,
+    "s_per_page": 2.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2326",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 8.71,
+    "s_per_page": 1.843,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 21.36,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2329",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 49.54,
+    "s_per_page": 0.709,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 57.08,
+    "s_per_page": 10.084,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2373",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.48,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.014,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2402",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 13.18,
+    "s_per_page": 1.574,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 17.21,
+    "s_per_page": 12.129,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2443",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.982,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 32.22,
+    "s_per_page": 6.066,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2467",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 20.2,
+    "s_per_page": 1.045,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 17.25,
+    "s_per_page": 4.059,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2475",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 50.78,
+    "s_per_page": 1.784,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 15.7,
+    "s_per_page": 10.066,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2526",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.541,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2538",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.821,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2561",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 56.62,
+    "s_per_page": 1.505,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.81,
+    "s_per_page": 4.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2600",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 2.102,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 7.75,
+    "s_per_page": 4.017,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2706",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.429,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.021,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2747",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.358,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 4.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page275",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.28,
+    "s_per_page": 6.124,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 10.91,
+    "s_per_page": 20.117,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page283",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 59.82,
+    "s_per_page": 1.431,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 51.89,
+    "s_per_page": 6.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2861",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 56.79,
+    "s_per_page": 2.761,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.47,
+    "s_per_page": 6.068,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2867",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.582,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.27,
+    "s_per_page": 4.01,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2884",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.39,
+    "s_per_page": 2.731,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 6.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2893",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.708,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2905",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.927,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page2930",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 36.11,
+    "s_per_page": 0.433,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 76.92,
+    "s_per_page": 2.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page310",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.22,
+    "s_per_page": 5.072,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.74,
+    "s_per_page": 8.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page316",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 9.88,
+    "s_per_page": 1.291,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 55.95,
+    "s_per_page": 10.071,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page330",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.0,
+    "s_per_page": 1.063,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 36.36,
+    "s_per_page": 24.137,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page36",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 51.03,
+    "s_per_page": 1.207,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page37",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.47,
+    "s_per_page": 1.037,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.57,
+    "s_per_page": 6.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page408",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 87.27,
+    "s_per_page": 0.903,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 93.79,
+    "s_per_page": 4.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page41",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 84.26,
+    "s_per_page": 2.857,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page449",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 69.04,
+    "s_per_page": 1.023,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 72.64,
+    "s_per_page": 6.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page46",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 22.21,
+    "s_per_page": 1.772,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.78,
+    "s_per_page": 14.072,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page513",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 62.1,
+    "s_per_page": 2.197,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 78.87,
+    "s_per_page": 6.074,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page523",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.353,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page536",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.995,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.26,
+    "s_per_page": 6.015,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page56",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.32,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 41.38,
+    "s_per_page": 2.017,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page569",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 39.39,
+    "s_per_page": 1.155,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.76,
+    "s_per_page": 10.083,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page622",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.694,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page647",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.78,
+    "s_per_page": 1.55,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.1,
+    "s_per_page": 4.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page65",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 39.79,
+    "s_per_page": 0.875,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 30.62,
+    "s_per_page": 4.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page687",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 82.79,
+    "s_per_page": 0.842,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.51,
+    "s_per_page": 4.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page696",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.87,
+    "s_per_page": 1.117,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 21.05,
+    "s_per_page": 2.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page728",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 41.29,
+    "s_per_page": 1.191,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.08,
+    "s_per_page": 4.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page748",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 27.18,
+    "s_per_page": 1.306,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.64,
+    "s_per_page": 14.089,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page756",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 76.1,
+    "s_per_page": 1.481,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 43.36,
+    "s_per_page": 4.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page822",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.552,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page844",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.322,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page883",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 20.67,
+    "s_per_page": 0.828,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 20.67,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page887",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.141,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 88.11,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page890",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.604,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.016,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page900",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.209,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page917",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 45.9,
+    "s_per_page": 1.656,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.28,
+    "s_per_page": 14.105,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page96",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.613,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page965",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 98.21,
+    "s_per_page": 1.827,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 53.07,
+    "s_per_page": 8.084,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_CA_random_pages 1_page995",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 39.38,
+    "s_per_page": 0.571,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page157",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.777,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.78,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page174",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 45.05,
+    "s_per_page": 1.922,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page178",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.406,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.031,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page205",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.19,
+    "s_per_page": 1.901,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.89,
+    "s_per_page": 4.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page222",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.98,
+    "s_per_page": 1.315,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 92.34,
+    "s_per_page": 10.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page224",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 82.11,
+    "s_per_page": 1.526,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 80.35,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page230",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.059,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.026,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page255",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.524,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 90.0,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page274",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.65,
+    "s_per_page": 2.972,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.068,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page276",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 0.519,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 12.66,
+    "s_per_page": 4.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page277",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 3.082,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 85.8,
+    "s_per_page": 6.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page42",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.567,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page50",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.57,
+    "s_per_page": 1.213,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page80",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.89,
+    "s_per_page": 1.836,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 36.08,
+    "s_per_page": 12.124,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_Interstate_random_pages 1_page9",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.087,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 62.1,
+    "s_per_page": 2.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.86,
+    "s_per_page": 0.899,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1028",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.473,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1029",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 55.53,
+    "s_per_page": 1.074,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.51,
+    "s_per_page": 8.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1036",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.55,
+    "s_per_page": 1.146,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.96,
+    "s_per_page": 8.066,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1045",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 86.95,
+    "s_per_page": 0.749,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1051",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.782,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.04,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1056",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 23.94,
+    "s_per_page": 3.923,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 14.123,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1057",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 75.0,
+    "s_per_page": 2.188,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.038,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1065",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.465,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.0,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1072",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 86.14,
+    "s_per_page": 2.956,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 37.33,
+    "s_per_page": 24.193,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1075",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 64.16,
+    "s_per_page": 2.943,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 39.32,
+    "s_per_page": 24.167,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1124",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.562,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 3.15,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1139",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.687,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1168",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.424,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1193",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.343,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1197",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.76,
+    "s_per_page": 1.372,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 75.25,
+    "s_per_page": 6.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1209",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 6.85,
+    "s_per_page": 2.683,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 4.59,
+    "s_per_page": 16.124,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1212",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 75.0,
+    "s_per_page": 1.007,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 76.12,
+    "s_per_page": 2.014,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1213",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 26.46,
+    "s_per_page": 1.907,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 6.04,
+    "s_per_page": 10.098,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1214",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 25.0,
+    "s_per_page": 0.146,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 19.59,
+    "s_per_page": 2.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1220",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.354,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1282",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.654,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.019,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1284",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.238,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1288",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 79.61,
+    "s_per_page": 2.294,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1293",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.328,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 8.065,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page1299",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 33.16,
+    "s_per_page": 1.033,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page159",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.636,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.5,
+    "s_per_page": 2.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page173",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 43.66,
+    "s_per_page": 2.014,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 26.76,
+    "s_per_page": 6.086,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page201",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 80.58,
+    "s_per_page": 1.673,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.86,
+    "s_per_page": 6.017,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page244",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.61,
+    "s_per_page": 1.416,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.61,
+    "s_per_page": 4.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page284",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.536,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.033,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page298",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.51,
+    "s_per_page": 4.779,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.69,
+    "s_per_page": 12.135,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 45.68,
+    "s_per_page": 1.574,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 44.73,
+    "s_per_page": 10.074,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page300",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.345,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page301",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 26.17,
+    "s_per_page": 0.585,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 33.08,
+    "s_per_page": 2.008,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page384",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 68.2,
+    "s_per_page": 1.562,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 70.5,
+    "s_per_page": 4.024,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page398",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.431,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page402",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.439,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page414",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 46.57,
+    "s_per_page": 1.101,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 50.63,
+    "s_per_page": 4.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page43",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 55.19,
+    "s_per_page": 1.258,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.79,
+    "s_per_page": 6.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page434",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 24.45,
+    "s_per_page": 1.005,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 78.18,
+    "s_per_page": 6.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page453",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.41,
+    "s_per_page": 1.374,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.33,
+    "s_per_page": 4.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page455",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.365,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.007,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page461",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 64.08,
+    "s_per_page": 1.2,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 79.06,
+    "s_per_page": 6.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page503",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 92.5,
+    "s_per_page": 0.855,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page563",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 87.64,
+    "s_per_page": 2.074,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.5,
+    "s_per_page": 20.172,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page568",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 87.61,
+    "s_per_page": 2.354,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 27.76,
+    "s_per_page": 24.16,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page580",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 44.59,
+    "s_per_page": 0.892,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 45.21,
+    "s_per_page": 6.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page587",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.275,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.081,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page649",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 40.2,
+    "s_per_page": 1.495,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page650",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.97,
+    "s_per_page": 0.48,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.97,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page706",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.11,
+    "s_per_page": 2.228,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page754",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 13.17,
+    "s_per_page": 0.839,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page783",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 79.17,
+    "s_per_page": 0.252,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.029,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page810",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 6.4,
+    "s_per_page": 3.004,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 5.79,
+    "s_per_page": 16.141,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page823",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 66.9,
+    "s_per_page": 1.227,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 71.82,
+    "s_per_page": 4.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page824",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 81.92,
+    "s_per_page": 1.671,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.02,
+    "s_per_page": 6.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page827",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.83,
+    "s_per_page": 1.16,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.015,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page830",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.251,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page831",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 86.36,
+    "s_per_page": 2.704,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 86.36,
+    "s_per_page": 6.072,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page838",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.249,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.94,
+    "s_per_page": 6.073,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page847",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 56.48,
+    "s_per_page": 1.262,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.41,
+    "s_per_page": 6.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page848",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.48,
+    "s_per_page": 1.081,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.61,
+    "s_per_page": 4.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page857",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 50.48,
+    "s_per_page": 0.925,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 44.18,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page865",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.79,
+    "s_per_page": 1.766,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.79,
+    "s_per_page": 6.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page889",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 93.74,
+    "s_per_page": 0.662,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 63.66,
+    "s_per_page": 4.06,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page891",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 88.62,
+    "s_per_page": 0.544,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.31,
+    "s_per_page": 2.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page898",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.81,
+    "s_per_page": 1.456,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 75.56,
+    "s_per_page": 6.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page905",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.801,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.053,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page92",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 74.82,
+    "s_per_page": 2.213,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.039,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page964",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 24.45,
+    "s_per_page": 1.011,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 67.76,
+    "s_per_page": 6.049,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page975",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 32.19,
+    "s_per_page": 1.973,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 33.93,
+    "s_per_page": 12.135,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page985",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.234,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.02,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SERFF_TX_random_pages 1_page993",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.955,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/SYK.2010.page_26.pdf_136878_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 13.96,
+    "s_per_page": 1.45,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.33,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/TEDS Paper_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 38.83,
+    "s_per_page": 1.225,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 34.24,
+    "s_per_page": 2.016,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/TEDS Paper_page6",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 81.69,
+    "s_per_page": 1.381,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 90.27,
+    "s_per_page": 2.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page102",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 1.455,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 2.34,
+    "s_per_page": 4.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page18",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 4.78,
+    "s_per_page": 1.915,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 4.76,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page40",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 1.36,
+    "s_per_page": 3.124,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 1.36,
+    "s_per_page": 2.034,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page67",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 2.41,
+    "s_per_page": 1.887,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 2.37,
+    "s_per_page": 2.012,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page75",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 1.54,
+    "s_per_page": 2.042,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 2.31,
+    "s_per_page": 2.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Tables - Apple Def 14a_page8",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 0.0,
+    "s_per_page": 1.766,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 3.09,
+    "s_per_page": 4.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/UNM.2007.page_51.pdf_45297_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 63.92,
+    "s_per_page": 1.663,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.74,
+    "s_per_page": 8.076,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.824,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.032,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page29",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.806,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.6,
+    "s_per_page": 2.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.281,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.79,
+    "s_per_page": 4.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page36",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.268,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.028,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page37",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.94,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.024,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page47",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 55.63,
+    "s_per_page": 0.736,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.48,
+    "s_per_page": 2.018,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page49",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.609,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.008,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/USPS 10-k_page50",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.736,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.32,
+    "s_per_page": 4.036,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/VRSK.2012.page_125.pdf_105195_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 59.53,
+    "s_per_page": 0.669,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.61,
+    "s_per_page": 4.054,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/VRSK.2018.page_141.pdf_105144_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 64.3,
+    "s_per_page": 1.421,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.08,
+    "s_per_page": 6.076,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.91,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.038,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page39",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.6,
+    "s_per_page": 1.466,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page4",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.6,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 86.25,
+    "s_per_page": 4.018,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page41",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 78.99,
+    "s_per_page": 0.867,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.33,
+    "s_per_page": 2.03,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.865,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.057,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page54",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.264,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.68,
+    "s_per_page": 4.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page55",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 50.38,
+    "s_per_page": 1.706,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.93,
+    "s_per_page": 8.064,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/Victoria Secret 10-k_page72",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 78.99,
+    "s_per_page": 1.274,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 74.94,
+    "s_per_page": 2.048,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/WU.2015.page_161.pdf_68095_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 40.13,
+    "s_per_page": 1.082,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.36,
+    "s_per_page": 4.069,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/axa_urd2024_accessible_va_page21",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 47.78,
+    "s_per_page": 0.681,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 94.51,
+    "s_per_page": 2.043,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/blackrock-funds-i-icav-annual-report-2022_page13",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 22.34,
+    "s_per_page": 1.471,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 82.38,
+    "s_per_page": 4.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/blackrock-funds-i-icav-annual-report-2022_page25",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 73.55,
+    "s_per_page": 1.334,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 2.055,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/blackrock-funds-i-icav-annual-report-2022_page42",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 43.88,
+    "s_per_page": 0.784,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 37.59,
+    "s_per_page": 4.006,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/bls-Feb-2026_page14",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 54.19,
+    "s_per_page": 3.525,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 96.35,
+    "s_per_page": 14.109,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/bls-Feb-2026_page15",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 53.28,
+    "s_per_page": 3.205,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 42.44,
+    "s_per_page": 16.072,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/bls-Feb-2026_page16",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 57.66,
+    "s_per_page": 1.401,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.67,
+    "s_per_page": 4.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/corp-q1-2025_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.387,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.67,
+    "s_per_page": 2.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/corp-q1-2025_page13",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.0,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.84,
+    "s_per_page": 2.015,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/drill angle hierarchical table header_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.87,
+    "s_per_page": 1.839,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 50.85,
+    "s_per_page": 10.115,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/drill angle hierarchical table header_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 67.44,
+    "s_per_page": 1.558,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 98.19,
+    "s_per_page": 4.051,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/drought-tolerant-plant-list_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 15.37,
+    "s_per_page": 2.952,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 10.1,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/drought-tolerant-plant-list_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 71.88,
+    "s_per_page": 1.491,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 72.75,
+    "s_per_page": 12.124,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/fqr-retail-blackrock-global-allocation-fund-inc_page4",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 37.99,
+    "s_per_page": 2.187,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 12.73,
+    "s_per_page": 6.055,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/fqr-retail-blackrock-global-allocation-fund-inc_page8",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 76.49,
+    "s_per_page": 2.4,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.01,
+    "s_per_page": 10.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/gallagherre-reinsurance-market-report-2024_page20",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.415,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.068,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/hard_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 49.46,
+    "s_per_page": 1.443,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/hard_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.79,
+    "s_per_page": 2.422,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 1.64,
+    "s_per_page": 22.153,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/iCoolPSC+Blower+Catalog+2024_page27",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.199,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.91,
+    "s_per_page": 6.085,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/iCoolPSC+Blower+Catalog+2024_page33",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 2.626,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.96,
+    "s_per_page": 10.086,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/left-side sparse and no outline_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 69.72,
+    "s_per_page": 1.634,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 60.5,
+    "s_per_page": 10.096,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/llama_page18",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 83.18,
+    "s_per_page": 1.674,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 73.81,
+    "s_per_page": 14.124,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/llama_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 69.47,
+    "s_per_page": 1.009,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 46.5,
+    "s_per_page": 4.063,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/llama_page7",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.89,
+    "s_per_page": 1.434,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.05,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/llong_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 42.06,
+    "s_per_page": 10.488,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.022,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/long-table_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.511,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.042,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/long-table_page5",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 0.521,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.044,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/metlife_sustainability_report_2024_non_gaap_and_other_financial_disclosures_page3",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 64.54,
+    "s_per_page": 1.742,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.07,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/myco hierarchical table header_page3",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 40.34,
+    "s_per_page": 0.999,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 77.42,
+    "s_per_page": 6.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/myco hierarchical table header_page4",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 44.37,
+    "s_per_page": 1.153,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 81.34,
+    "s_per_page": 4.037,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/myco hierarchical table header_page5",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 70.9,
+    "s_per_page": 1.362,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 66.87,
+    "s_per_page": 4.015,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/myco hierarchical table header_page6",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 48.13,
+    "s_per_page": 1.428,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 91.68,
+    "s_per_page": 6.046,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/p29_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 12.943,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.081,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/pub-derivatives-quarterly-qtr1-2019_page6",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.011,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 4.047,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/sample_page_16_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 7.827,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.082,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/sizingchart_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 96.72,
+    "s_per_page": 0.736,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.061,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/sizingchart_page2",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.237,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 100.0,
+    "s_per_page": 6.058,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/synthetic_colspan_table_no_borders_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 93.3,
+    "s_per_page": 1.098,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 75.0,
+    "s_per_page": 4.045,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/synthetic_duplicate_tables_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 16.34,
+    "s_per_page": 1.881,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.027,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/synthetic_invoice_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 97.27,
+    "s_per_page": 1.574,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/synthetic_invoice_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.98,
+    "s_per_page": 1.35,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 0.0,
+    "s_per_page": 2.035,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/synthetic_page81_detached_cells_page1",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 100.0,
+    "s_per_page": 1.52,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 90.81,
+    "s_per_page": 4.056,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/tabular_2_page2",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 61.54,
+    "s_per_page": 1.91,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 58.08,
+    "s_per_page": 28.13,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/test_page1",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 49.28,
+    "s_per_page": 2.229,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 25.11,
+    "s_per_page": 22.119,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/walmart-earnings-release-fy24-q4_page13",
+  "tags": "table,hard",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 16.41,
+    "s_per_page": 1.149,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 49.92,
+    "s_per_page": 4.041,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/walmart-earnings-release-fy24-q4_page4",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 99.19,
+    "s_per_page": 2.207,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 99.19,
+    "s_per_page": 4.007,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/xl-re-europe-se-sfcr-2024_page10",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 9.93,
+    "s_per_page": 1.209,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 95.75,
+    "s_per_page": 2.025,
+    "success": true
+   }
+  }
+ },
+ {
+  "doc": "table/xl-re-europe-se-sfcr-2024_page19",
+  "tags": "table,easy",
+  "pipelines": {
+   "pymupdf4llm": {
+    "gtrm": 43.39,
+    "s_per_page": 1.124,
+    "success": true
+   },
+   "docling": {
+    "gtrm": 48.28,
+    "s_per_page": 4.039,
+    "success": true
+   }
+  }
+ }
+]
