@@ -111,27 +111,44 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
             merged, SOURCE_MEASURED
         )
 
-        cold = None
-        if with_coldstart and "coldstart" in spec:
+        cold = _cached(work, "coldstart.json").get(pid)
+        if cold is None and with_coldstart and "coldstart" in spec:
             from . import coldstart
 
             cs = spec["coldstart"]
             cold = coldstart.measure(spec["python"], cs["import_stmt"],
                                      cs["first_doc_expr"], cs["doc"])
+            _cache_put(work, "coldstart.json", pid, cold)
         summary["performance"][pid] = collect.performance_block(
             merged, SOURCE_MEASURED, peak_rss.get(pid), cold
         )
 
-        if with_footprint and "footprint_packages" in spec:
+        fp = _cached(work, "footprint.json").get(pid)
+        if fp is None and with_footprint and "footprint_packages" in spec:
             from . import footprint
 
             fp = footprint.measure(spec["footprint_packages"],
                                    extra_index_url=spec.get("footprint_extra_index_url"))
+            _cache_put(work, "footprint.json", pid, fp)
+        if fp is not None:
             summary["footprint"][pid] = {"source": SOURCE_MEASURED, **fp}
 
     _add_ratios(summary["performance"], baseline_id)
     documents = collect.document_rows(merged_by_pipeline)
     return write_run(results_dir, summary, documents, label)
+
+
+def _cached(work: Path, name: str) -> dict:
+    path = work / name
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return {}
+
+
+def _cache_put(work: Path, name: str, pid: str, value: dict) -> None:
+    cache = _cached(work, name)
+    cache[pid] = value
+    (work / name).write_text(json.dumps(cache), encoding="utf-8")
 
 
 def _run_parse_bench(spec: dict, group: str, out_dir: Path,
