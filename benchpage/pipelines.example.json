@@ -17,9 +17,54 @@
       "coldstart": {
         "import_stmt": "import pymupdf4llm",
         "first_doc_expr": "pymupdf4llm.to_markdown(DOC)",
-        "doc": "data/sample/coldstart.pdf"
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
       },
       "footprint_packages": ["pymupdf4llm==1.28.2"]
+    },
+    {
+      "id": "pymupdf_text",
+      "label": "PyMuPDF · text (core, no layout)",
+      "category": "local",
+      "parse_bench_pipeline": "pymupdf_text",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"pymupdf": "1.28.2"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "import pymupdf",
+        "first_doc_expr": "chr(10).join(p.get_text() for p in pymupdf.open(DOC))",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["pymupdf==1.28.2"]
+    },
+    {
+      "id": "pypdf",
+      "label": "pypdf",
+      "category": "local",
+      "parse_bench_pipeline": "pypdf_baseline",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"pypdf": "6.16.2"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from pypdf import PdfReader",
+        "first_doc_expr": "chr(10).join((p.extract_text() or '') for p in PdfReader(DOC).pages)",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["pypdf"]
+    },
+    {
+      "id": "markitdown",
+      "label": "MarkItDown",
+      "category": "local",
+      "parse_bench_pipeline": "markitdown",
+      "python": ".venvs/markitdown/Scripts/python.exe",
+      "versions": {},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from markitdown import MarkItDown",
+        "first_doc_expr": "MarkItDown().convert(DOC).text_content",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["markitdown[pdf]"]
     },
     {
       "id": "docling",
@@ -30,13 +75,15 @@
       "env": {"DOCLING_SERVE_ENDPOINT_URL": "http://localhost:5001"},
       "python": ".venvs/docling/Scripts/python.exe",
       "versions": {
-        "docling": "2.121.0"
+        "docling-serve": "1.31.0",
+        "docling": "2.122.0 (slim)",
+        "torch": "2.13.0+cpu"
       },
       "fee_per_1k_pages": null,
       "coldstart": {
         "import_stmt": "from docling.document_converter import DocumentConverter",
         "first_doc_expr": "DocumentConverter().convert(DOC).document.export_to_markdown()",
-        "doc": "data/sample/coldstart.pdf"
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
       },
       "footprint_packages": ["docling"],
       "footprint_extra_index_url": "https://download.pytorch.org/whl/cpu"

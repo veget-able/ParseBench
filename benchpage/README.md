@@ -85,6 +85,15 @@ leaderboard's "Docling-models" row was produced via the `docling_parse`
 pipeline against a hosted inference endpoint; the scoring code downstream
 of the provider is the same.
 
+## Roster notes
+
+The example config covers the local, no-API-key engines: the PyMuPDF
+layout stack, the vanilla PyMuPDF text core as a speed reference, pypdf,
+MarkItDown, and Docling. Upstream's `liteparse` provider shells out to a
+Rust CLI expected outside this repository (`../target/release/lit`), so
+LiteParse is cited from the published leaderboard instead of being run
+here. Cloud APIs and GPU/vLLM pipelines are likewise cited, not re-run.
+
 ## Follow-ups
 
 * Start-run-stop workflow for the pinned AWS runner (schedule/dispatch
