@@ -39,10 +39,12 @@ MAX_CONCURRENT = 1  # hard rule; see module docstring
 
 def run(config_path: str, group: str, reps: int, results_dir: str,
         label: str | None, work_dir: str, run_id: str | None,
-        with_coldstart: bool, with_footprint: bool) -> Path:
+        with_coldstart: bool, with_footprint: bool,
+        input_dir: str | None = None) -> Path:
     config = json.loads(Path(config_path).read_text(encoding="utf-8"))
     pipelines = config["pipelines"]
     baseline_id = config.get("baseline")
+    input_dir = input_dir or config.get("input_dir")
 
     started = sysinfo.utc_now_iso()
     rid = run_id or time.strftime("%Y%m%d-%H%M%S")
@@ -53,7 +55,7 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
     for rep in range(reps):
         for spec in pipelines:  # interleaved on purpose; see module docstring
             out_dir = work / f"rep{rep}" / spec["id"]
-            rss = _run_parse_bench(spec, group, out_dir)
+            rss = _run_parse_bench(spec, group, out_dir, input_dir)
             if rss is not None:
                 peak_rss[spec["id"]] = max(peak_rss.get(spec["id"], 0.0), rss)
 
@@ -112,7 +114,8 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
     return write_run(results_dir, summary, documents, label)
 
 
-def _run_parse_bench(spec: dict, group: str, out_dir: Path) -> float | None:
+def _run_parse_bench(spec: dict, group: str, out_dir: Path,
+                     input_dir: str | None = None) -> float | None:
     """Run one pipeline once; return peak RSS in MB (None without psutil)."""
     out_dir.mkdir(parents=True, exist_ok=True)
     cmd = _parse_bench_cmd(spec) + [
@@ -122,6 +125,8 @@ def _run_parse_bench(spec: dict, group: str, out_dir: Path) -> float | None:
         "--open_report", "False",
         "--output_dir", str(out_dir),
     ]
+    if input_dir:
+        cmd += ["--input_dir", str(input_dir)]
     proc = subprocess.Popen(cmd, env={**os.environ, **spec.get("env", {})})
     peak = _watch_rss(proc)
     if proc.wait() != 0:
@@ -195,12 +200,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--label")
     ap.add_argument("--work-dir", default="benchpage-out")
     ap.add_argument("--run-id")
+    ap.add_argument("--input-dir", help="test cases dir (default: ParseBench's ./data)")
     ap.add_argument("--with-coldstart", action="store_true")
     ap.add_argument("--with-footprint", action="store_true")
     args = ap.parse_args(argv)
     run_dir = run(args.config, args.group, args.reps, args.results_dir,
                   args.label, args.work_dir, args.run_id,
-                  args.with_coldstart, args.with_footprint)
+                  args.with_coldstart, args.with_footprint,
+                  input_dir=args.input_dir)
     print(f"wrote {run_dir}")
     return 0
 

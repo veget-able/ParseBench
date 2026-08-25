@@ -69,14 +69,16 @@ benchpage.coldstart --help`, `python -m benchpage.footprint --help`).
 
 ## Docling
 
-Docling is measured through upstream's stock `docling_parse` pipeline,
-which talks to a Docling HTTP endpoint (`DOCLING_PARSE_ENDPOINT_URL`; the
-example config points it at a local docling-serve). The runner must start
-docling-serve on the same machine before the run, so Docling's latency
-includes a localhost HTTP hop; that is recorded here as a caveat, while
+Docling is measured through upstream's stock `docling_serve` pipeline,
+which calls the official docling-serve HTTP API
+(`DOCLING_SERVE_ENDPOINT_URL`, endpoint `/v1/convert/source`), so both
+sides of the pair are unmodified upstream code. The runner starts
+docling-serve on the same machine before the run; Docling's latency
+therefore includes a localhost HTTP hop, recorded here as a caveat, while
 cold start and footprint measure the docling library directly in its own
-venv. Quality scoring is upstream's, unmodified (leaderboard row
-"Docling-models").
+venv. Note the published leaderboard's "Docling-models" row was produced
+via the `docling_parse` pipeline against a hosted inference endpoint; the
+scoring code downstream of the provider is the same.
 
 ## Follow-ups
 

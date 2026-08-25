@@ -25,8 +25,8 @@
       "id": "docling",
       "label": "Docling",
       "category": "local",
-      "parse_bench_pipeline": "docling_parse",
-      "env": {"DOCLING_PARSE_ENDPOINT_URL": "http://localhost:5001"},
+      "parse_bench_pipeline": "docling_serve",
+      "env": {"DOCLING_SERVE_ENDPOINT_URL": "http://localhost:5001"},
       "python": ".venvs/docling/Scripts/python.exe",
       "versions": {
         "docling": "2.121.0"
