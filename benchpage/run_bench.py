@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import threading
 import time
@@ -119,7 +120,7 @@ def _run_parse_bench(spec: dict, group: str, out_dir: Path) -> float | None:
         "--open_report", "False",
         "--output_dir", str(out_dir),
     ]
-    proc = subprocess.Popen(cmd)
+    proc = subprocess.Popen(cmd, env={**os.environ, **spec.get("env", {})})
     peak = _watch_rss(proc)
     if proc.wait() != 0:
         raise RuntimeError(f"parse-bench failed for {spec['id']} (exit {proc.returncode})")

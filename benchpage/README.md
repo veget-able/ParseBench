@@ -62,9 +62,19 @@ benchpage.coldstart --help`, `python -m benchpage.footprint --help`).
   `pip freeze` hash, instance/CPU/OS/Python, and the LLM-normalization
   setting (off by default since upstream #107).
 
+## Docling
+
+Docling is measured through upstream's stock `docling_parse` pipeline,
+which talks to a Docling HTTP endpoint (`DOCLING_PARSE_ENDPOINT_URL`; the
+example config points it at a local docling-serve). The runner must start
+docling-serve on the same machine before the run, so Docling's latency
+includes a localhost HTTP hop; that is recorded here as a caveat, while
+cold start and footprint measure the docling library directly in its own
+venv. Quality scoring is upstream's, unmodified (leaderboard row
+"Docling-models").
+
 ## Follow-ups
 
-* A `docling` provider/pipeline does not exist upstream yet; the example
-  config lists it to fix the target shape for the compare-page embed.
 * Start-run-stop workflow for the pinned AWS runner (schedule/dispatch
-  triggered only; no PR-triggered execution on the self-hosted runner).
+  triggered only; no PR-triggered execution on the self-hosted runner),
+  including bringing docling-serve up and down around the run.
