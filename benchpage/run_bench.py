@@ -52,10 +52,19 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
     work.mkdir(parents=True, exist_ok=True)
 
     peak_rss: dict[str, float] = {}
+    failed: dict[str, str] = {}
     for rep in range(reps):
         for spec in pipelines:  # interleaved on purpose; see module docstring
+            if spec["id"] in failed:
+                continue
             out_dir = work / f"rep{rep}" / spec["id"]
-            rss = _run_parse_bench(spec, group, out_dir, input_dir)
+            try:
+                rss = _run_parse_bench(spec, group, out_dir, input_dir)
+            except RuntimeError as exc:
+                # One pipeline's failure must not discard the others' results.
+                failed[spec["id"]] = str(exc)
+                print(f"[benchpage] pipeline {spec['id']} failed: {exc}")
+                continue
             if rss is not None:
                 peak_rss[spec["id"]] = max(peak_rss.get(spec["id"], 0.0), rss)
 
@@ -69,9 +78,14 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
     )
     summary["env"] = sysinfo.collect()
 
+    if failed:
+        summary["run"]["failed_pipelines"] = failed
+
     merged_by_pipeline: dict[str, dict] = {}
     for spec in pipelines:
         pid = spec["id"]
+        if pid in failed:
+            continue
         runs = [
             collect.load_run(work / f"rep{rep}" / pid / spec["parse_bench_pipeline"])
             for rep in range(reps)
