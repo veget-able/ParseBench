@@ -57,7 +57,7 @@
       "category": "local",
       "parse_bench_pipeline": "markitdown",
       "python": ".venvs/markitdown/Scripts/python.exe",
-      "versions": {},
+      "versions": {"markitdown": "0.1.7", "pdfminer.six": "20260107"},
       "fee_per_1k_pages": null,
       "coldstart": {
         "import_stmt": "from markitdown import MarkItDown",
