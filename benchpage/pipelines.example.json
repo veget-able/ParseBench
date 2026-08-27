@@ -67,6 +67,30 @@
       "footprint_packages": ["markitdown[pdf]"]
     },
     {
+      "id": "liteparse",
+      "label": "LiteParse (no OCR)",
+      "category": "local",
+      "parse_bench_pipeline": "liteparse_markdown",
+      "python": ".venvs/liteparse/Scripts/python.exe",
+      "versions": {"liteparse": "2.14.0"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from liteparse import LiteParse",
+        "first_doc_expr": "LiteParse(ocr_enabled=False).parse(DOC)",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["liteparse"]
+    },
+    {
+      "id": "llamaparse_ce",
+      "label": "LlamaParse Cost Effective",
+      "category": "cloud",
+      "parse_bench_pipeline": "llamaparse_cost_effective",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"tier": "cost_effective", "version": "latest"},
+      "fee_per_1k_pages": 3.75
+    },
+    {
       "id": "docling",
       "label": "Docling",
       "category": "local",

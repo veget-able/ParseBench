@@ -87,12 +87,28 @@ of the provider is the same.
 
 ## Roster notes
 
-The example config covers the local, no-API-key engines: the PyMuPDF
-layout stack, the vanilla PyMuPDF text core as a speed reference, pypdf,
-MarkItDown, and Docling. Upstream's `liteparse` provider shells out to a
-Rust CLI expected outside this repository (`../target/release/lit`), so
-LiteParse is cited from the published leaderboard instead of being run
-here. Cloud APIs and GPU/vLLM pipelines are likewise cited, not re-run.
+The example config covers the PyMuPDF layout stack, the vanilla PyMuPDF
+text core as a speed reference, pypdf, MarkItDown, LiteParse, Docling, and
+LlamaParse Cost Effective as the one cloud reference.
+
+* **LiteParse.** Upstream's `liteparse` provider shells out to the `lit`
+  CLI at `<repository parent>/target/release/lit` (the path of a Rust
+  workspace build). The PyPI package `liteparse` ships the same CLI, so
+  copy `<venv>/Scripts/lit.exe` (Windows) or `<venv>/bin/lit` (Linux) to
+  that path; no provider change is needed. `lit parse --format json` from
+  the 2.14.0 wheel matches the provider's contract (`pages[].page/text`,
+  `--no-links`, `--no-ocr`, `--preserve-small-text`).
+* **LlamaParse.** `llamaparse_cost_effective` needs `LLAMA_CLOUD_API_KEY`
+  in the environment of the process that runs `run_bench`; never put the
+  key in a config file. Cloud engines get no cold-start or footprint
+  measurement, and their latency includes the network, so they are
+  reported as reference rows. The leaderboard's cost column is cents per
+  page: 0.375 for the cost-effective tier, i.e. $3.75 per 1k pages.
+* **pypdf** scores 0 on the tables group by design: its plain-text output
+  carries no table structure, so the GTRM matcher finds no tables. The
+  published leaderboard shows the same 0.00.
+
+GPU/vLLM pipelines are cited from the published leaderboard, not re-run.
 
 ## Follow-ups
 
