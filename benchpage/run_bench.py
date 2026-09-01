@@ -107,9 +107,13 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
             "fee_per_1k_pages": spec.get("fee_per_1k_pages"),
             "lock_sha256": sysinfo.venv_lock_sha256(spec["python"]),
         }
-        summary["quality"].setdefault(group, {})[pid] = collect.quality_block(
-            merged, SOURCE_MEASURED
-        )
+        if group == "all":
+            for g, block in collect.group_quality_blocks(merged, SOURCE_MEASURED).items():
+                summary["quality"].setdefault(g, {})[pid] = block
+        else:
+            summary["quality"].setdefault(group, {})[pid] = collect.quality_block(
+                merged, SOURCE_MEASURED
+            )
 
         cold = _cached(work, "coldstart.json").get(pid)
         if cold is None and with_coldstart and "coldstart" in spec:
@@ -157,11 +161,12 @@ def _run_parse_bench(spec: dict, group: str, out_dir: Path,
     out_dir.mkdir(parents=True, exist_ok=True)
     cmd = _parse_bench_cmd(spec) + [
         "run", spec["parse_bench_pipeline"],
-        "--group", group,
         "--max_concurrent", str(MAX_CONCURRENT),
         "--open_report", "False",
         "--output_dir", str(out_dir),
     ]
+    if group != "all":  # "all" runs the whole dataset in one official pass
+        cmd += ["--group", group]
     if input_dir:
         cmd += ["--input_dir", str(input_dir)]
     proc = subprocess.Popen(cmd, env={**os.environ, **spec.get("env", {})})

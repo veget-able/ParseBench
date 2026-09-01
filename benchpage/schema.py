@@ -121,9 +121,10 @@ def validate_summary(doc: dict) -> list[str]:
                 continue
             if block.get("source") not in (SOURCE_MEASURED, SOURCE_PLACEHOLDER):
                 problems.append(f"quality.{group}.{pid}: bad source")
-            gtrm = block.get("gtrm")
-            if gtrm is not None and not (0.0 <= gtrm <= 100.0):
-                problems.append(f"quality.{group}.{pid}: gtrm {gtrm} outside 0-100")
+            for field in ("gtrm", "score"):
+                v = block.get(field)
+                if v is not None and not (0.0 <= v <= 100.0):
+                    problems.append(f"quality.{group}.{pid}: {field} {v} outside 0-100")
 
     for section in ("performance", "footprint"):
         for pid, block in doc[section].items():

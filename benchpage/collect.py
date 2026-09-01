@@ -25,6 +25,19 @@ from .schema import median
 
 GTRM_COLUMN = "grits_trm_composite"  # ParseBench's field name for GTRM
 
+GROUPS = ("table", "chart", "layout", "text_content", "text_formatting")
+
+# ParseBench's own per-category headline metric (see upstream
+# analysis/aggregation_report.py::_DEFAULT_METRICS); categories without an
+# entry there fall back to rule_pass_rate, exactly as upstream does.
+HEADLINE_METRICS = {
+    "table": "grits_trm_composite",
+    "chart": "rule_pass_rate",
+    "layout": "layout_element_rule_pass_rate",
+    "text_content": "content_faithfulness",
+    "text_formatting": "semantic_formatting",
+}
+
 
 def load_run(pipeline_dir: str | Path) -> dict:
     """Load one pipeline's artifacts from one ParseBench run directory."""
@@ -98,6 +111,66 @@ def quality_block(combined: dict, source: str) -> dict:
         "deterministic": combined["deterministic"],
         "rep_doc_counts": combined["rep_doc_counts"],
     }
+
+
+def _tag_headline(tag_metrics: dict, group: str) -> float | None:
+    m = tag_metrics.get(group)
+    if not m:
+        return None
+    for key in (HEADLINE_METRICS.get(group), "rule_pass_rate"):
+        if key and f"avg_{key}" in m:
+            return m[f"avg_{key}"]
+    return None
+
+
+def group_quality_blocks(combined: dict, source: str) -> dict:
+    """Per-category blocks plus Overall, from one full (no group filter) run.
+
+    Category scores are ParseBench's own per-tag aggregates from the
+    evaluation report; Overall follows the leaderboard's definition, the
+    plain average across the five categories.
+    """
+    tags = combined["reference"]["report"].get("tag_metrics", {})
+    blocks: dict = {}
+    for g in GROUPS:
+        score = _tag_headline(tags, g)
+        if score is None:
+            continue
+        deterministic = len({
+            _tag_headline(r["report"].get("tag_metrics", {}), g)
+            for r in combined["runs"]
+        }) == 1
+        docs = sum(
+            1 for d in combined["reference"]["docs"]
+            if g in (d["tags"] or "").split(",")
+        )
+        block = {
+            "source": source,
+            "score": _round2(_scale100(score)),
+            "metric": HEADLINE_METRICS[g],
+            "docs_scored": docs,
+            "deterministic": deterministic,
+            "rep_doc_counts": combined["rep_doc_counts"],
+        }
+        if g == "table":
+            block["gtrm"] = block["score"]
+            block["grits_con"] = _round2(_scale100(tags[g].get("avg_grits_con")))
+            block["table_record_match"] = _round2(
+                _scale100(tags[g].get("avg_table_record_match"))
+            )
+        blocks[g] = block
+
+    if all(g in blocks for g in GROUPS):
+        cats = {g: blocks[g]["score"] for g in GROUPS}
+        blocks["overall"] = {
+            "source": source,
+            "score": _round2(sum(cats.values()) / len(cats)),
+            "metric": "average_across_categories",
+            "docs_scored": len(combined["reference"]["docs"]),
+            "deterministic": all(blocks[g]["deterministic"] for g in GROUPS),
+            "categories": cats,
+        }
+    return blocks
 
 
 def performance_block(combined: dict, source: str, peak_rss_mb: float | None = None,
