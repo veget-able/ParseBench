@@ -86,6 +86,11 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
 
     if failed:
         summary["run"]["failed_pipelines"] = failed
+    if len(failed) == len(pipelines):
+        raise RuntimeError(
+            "every pipeline failed; refusing to write an empty run: "
+            + json.dumps(failed)
+        )
 
     merged_by_pipeline: dict[str, dict] = {}
     for spec in pipelines:
