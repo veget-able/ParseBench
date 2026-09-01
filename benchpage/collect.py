@@ -21,7 +21,7 @@ import csv
 import json
 from pathlib import Path
 
-from .schema import median
+from .schema import median, percentile
 
 GTRM_COLUMN = "grits_trm_composite"  # ParseBench's field name for GTRM
 
