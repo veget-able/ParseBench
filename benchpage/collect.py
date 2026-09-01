@@ -39,11 +39,18 @@ HEADLINE_METRICS = {
 }
 
 
+def _read_json(path: Path) -> dict:
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return {}
+
+
 def load_run(pipeline_dir: str | Path) -> dict:
-    """Load one pipeline's artifacts from one ParseBench run directory."""
+    """Load one official evaluation directory (single group, or one category
+    subdirectory of a full run; the latter has no metadata/summary files)."""
     d = Path(pipeline_dir)
-    meta = json.loads((d / "_metadata.json").read_text(encoding="utf-8"))
-    summary = json.loads((d / "_summary.json").read_text(encoding="utf-8"))
+    meta = _read_json(d / "_metadata.json")
+    summary = _read_json(d / "_summary.json")
     report = json.loads((d / "_evaluation_report.json").read_text(encoding="utf-8"))
 
     docs = []
@@ -113,50 +120,84 @@ def quality_block(combined: dict, source: str) -> dict:
     }
 
 
-def _tag_headline(tag_metrics: dict, group: str) -> float | None:
-    m = tag_metrics.get(group)
-    if not m:
-        return None
+def load_full_run(pipeline_dir: str | Path) -> dict:
+    """Load one full-dataset run (no group filter).
+
+    ParseBench evaluates each category separately in that mode, writing one
+    official report per category subdirectory.
+    """
+    d = Path(pipeline_dir)
+    categories: dict = {}
+    docs: list = []
+    for g in GROUPS:
+        if (d / g / "_evaluation_report.json").exists():
+            r = load_run(d / g)
+            categories[g] = r
+            docs.extend(r["docs"])
+    if not categories:
+        raise FileNotFoundError(f"no category evaluations under {d}")
+    return {"categories": categories, "docs": docs}
+
+
+def combine_full_reps(runs: list[dict]) -> dict:
+    """Combine repeated full-dataset runs; reference is the median-latency
+    repetition among those with full document coverage."""
+    if not runs:
+        raise ValueError("combine_full_reps needs at least one run")
+    counts = [len(r["docs"]) for r in runs]
+    full = [r for r in runs if len(r["docs"]) == max(counts)]
+    p50s = {id(r): median(_doc_latencies(r)) for r in full}
+    target = median([p for p in p50s.values() if p is not None])
+    reference = min(full, key=lambda r: abs((p50s[id(r)] or 0) - (target or 0)))
+    return {
+        "reference": reference,
+        "runs": full,
+        "repetitions": len(runs),
+        "rep_doc_counts": counts,
+    }
+
+
+def _headline(metrics: dict, group: str) -> float | None:
     for key in (HEADLINE_METRICS.get(group), "rule_pass_rate"):
-        if key and f"avg_{key}" in m:
-            return m[f"avg_{key}"]
+        if key and f"avg_{key}" in metrics:
+            return metrics[f"avg_{key}"]
     return None
 
 
 def group_quality_blocks(combined: dict, source: str) -> dict:
-    """Per-category blocks plus Overall, from one full (no group filter) run.
+    """Per-category blocks plus Overall, from a full-dataset run.
 
-    Category scores are ParseBench's own per-tag aggregates from the
-    evaluation report; Overall follows the leaderboard's definition, the
-    plain average across the five categories.
+    Category scores are ParseBench's own aggregates from each category's
+    evaluation report, using upstream's headline metric per category;
+    Overall follows the leaderboard's definition, the plain average across
+    the five categories.
     """
-    tags = combined["reference"]["report"].get("tag_metrics", {})
+    ref_cats = combined["reference"]["categories"]
     blocks: dict = {}
     for g in GROUPS:
-        score = _tag_headline(tags, g)
+        if g not in ref_cats:
+            continue
+        metrics = ref_cats[g]["report"].get("aggregate_metrics", {})
+        score = _headline(metrics, g)
         if score is None:
             continue
         deterministic = len({
-            _tag_headline(r["report"].get("tag_metrics", {}), g)
-            for r in combined["runs"]
+            _headline(r["categories"][g]["report"].get("aggregate_metrics", {}), g)
+            for r in combined["runs"] if g in r["categories"]
         }) == 1
-        docs = sum(
-            1 for d in combined["reference"]["docs"]
-            if g in (d["tags"] or "").split(",")
-        )
         block = {
             "source": source,
             "score": _round2(_scale100(score)),
             "metric": HEADLINE_METRICS[g],
-            "docs_scored": docs,
+            "docs_scored": ref_cats[g]["report"].get("successful"),
             "deterministic": deterministic,
             "rep_doc_counts": combined["rep_doc_counts"],
         }
         if g == "table":
             block["gtrm"] = block["score"]
-            block["grits_con"] = _round2(_scale100(tags[g].get("avg_grits_con")))
+            block["grits_con"] = _round2(_scale100(metrics.get("avg_grits_con")))
             block["table_record_match"] = _round2(
-                _scale100(tags[g].get("avg_table_record_match"))
+                _scale100(metrics.get("avg_table_record_match"))
             )
         blocks[g] = block
 
@@ -171,6 +212,46 @@ def group_quality_blocks(combined: dict, source: str) -> dict:
             "categories": cats,
         }
     return blocks
+
+
+def _doc_latencies(run: dict) -> list[float]:
+    return [
+        d["latency_ms_per_page"] for d in run["docs"]
+        if d["latency_ms_per_page"] is not None
+    ]
+
+
+def full_performance_block(combined: dict, source: str,
+                           peak_rss_mb: float | None = None,
+                           cold_start: dict | None = None) -> dict:
+    """Latency pooled over all documents of a full-dataset run.
+
+    Per-document values are ParseBench's own; pooling them into p50/p95/mean
+    is ours, and across repetitions the median of each stat is taken.
+    """
+    def across(stat: str) -> float | None:
+        vals = []
+        for r in combined["runs"]:
+            xs = _doc_latencies(r)
+            if not xs:
+                continue
+            if stat == "p50":
+                vals.append(median(xs))
+            elif stat == "p95":
+                vals.append(percentile(xs, 95))
+            else:
+                vals.append(sum(xs) / len(xs))
+        ms = median(vals) if vals else None
+        return _round4(ms / 1000.0) if ms is not None else None
+
+    med = across("p50")
+    return {
+        "source": source,
+        "s_per_page": {"median": med, "p95": across("p95"), "mean": across("mean")},
+        "pages_per_min": _round2(60.0 / med) if med else None,
+        "cold_start_s": cold_start,
+        "peak_rss_mb": _round2(peak_rss_mb) if peak_rss_mb is not None else None,
+    }
 
 
 def performance_block(combined: dict, source: str, peak_rss_mb: float | None = None,

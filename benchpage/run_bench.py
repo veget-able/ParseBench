@@ -97,11 +97,14 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
         pid = spec["id"]
         if pid in failed:
             continue
-        runs = [
-            collect.load_run(work / f"rep{rep}" / pid / spec["parse_bench_pipeline"])
-            for rep in range(reps)
-        ]
-        merged = collect.combine_reps(runs)
+        rep_dirs = [work / f"rep{rep}" / pid / spec["parse_bench_pipeline"]
+                    for rep in range(reps)]
+        if group == "all":
+            merged = collect.combine_full_reps(
+                [collect.load_full_run(d) for d in rep_dirs])
+        else:
+            merged = collect.combine_reps(
+                [collect.load_run(d) for d in rep_dirs])
         merged_by_pipeline[pid] = merged
         summary["run"]["dataset"]["docs"] = len(merged["reference"]["docs"])
 
@@ -128,7 +131,9 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
             cold = coldstart.measure(spec["python"], cs["import_stmt"],
                                      cs["first_doc_expr"], cs["doc"])
             _cache_put(work, "coldstart.json", pid, cold)
-        summary["performance"][pid] = collect.performance_block(
+        perf_fn = (collect.full_performance_block if group == "all"
+                   else collect.performance_block)
+        summary["performance"][pid] = perf_fn(
             merged, SOURCE_MEASURED, peak_rss.get(pid), cold
         )
 

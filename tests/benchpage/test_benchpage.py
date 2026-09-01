@@ -110,30 +110,37 @@ def test_emit_round_trip(tmp_path):
     assert index[0]["run_id"] == "20990101-test"
 
 
+def _cat(metrics, successful=3, docs=None):
+    return {"report": {"aggregate_metrics": metrics, "successful": successful},
+            "docs": docs or []}
+
+
 def test_group_quality_blocks_overall():
-    tags = {
-        "table": {"avg_grits_trm_composite": 0.72, "avg_grits_con": 0.81,
-                  "avg_table_record_match": 0.60},
-        "chart": {"avg_rule_pass_rate": 0.10},
-        "layout": {"avg_layout_element_rule_pass_rate": 0.60},
-        "text_content": {"avg_content_faithfulness": 0.80},
-        "text_formatting": {"avg_semantic_formatting": 0.50},
+    run = {
+        "categories": {
+            "table": _cat({"avg_grits_trm_composite": 0.72, "avg_grits_con": 0.81,
+                           "avg_table_record_match": 0.60}),
+            "chart": _cat({"avg_rule_pass_rate": 0.10}),
+            "layout": _cat({"avg_layout_element_rule_pass_rate": 0.60}),
+            "text_content": _cat({"avg_content_faithfulness": 0.80}),
+            "text_formatting": _cat({"avg_semantic_formatting": 0.50}),
+        },
+        "docs": [{"tags": "table,easy", "latency_ms_per_page": 100.0},
+                 {"tags": "chart", "latency_ms_per_page": 300.0}],
     }
-    run = {"report": {"tag_metrics": tags},
-           "docs": [{"tags": "table,easy"}, {"tags": "chart"}]}
-    combined = {"reference": run, "runs": [run], "repetitions": 1,
-                "rep_doc_counts": [2], "deterministic": True}
+    combined = collect.combine_full_reps([run])
 
     blocks = collect.group_quality_blocks(combined, "measured")
-
     assert blocks["table"]["score"] == 72.0
     assert blocks["table"]["gtrm"] == 72.0
     assert blocks["chart"]["metric"] == "rule_pass_rate"
-    assert blocks["table"]["docs_scored"] == 1
     # Overall follows the leaderboard definition: average across categories
     assert blocks["overall"]["score"] == 54.4
     assert blocks["overall"]["metric"] == "average_across_categories"
     assert blocks["overall"]["categories"]["layout"] == 60.0
+
+    perf = collect.full_performance_block(combined, "measured")
+    assert perf["s_per_page"]["median"] == 0.2  # pooled median of 100 and 300 ms
 
 
 def test_validate_rejects_unknown_pipeline():
