@@ -83,10 +83,8 @@ def _imds_instance_type() -> str | None:
 
 
 def _cpu_name() -> str | None:
-    for candidate in (os.environ.get("PROCESSOR_IDENTIFIER"), platform.processor()):
-        if candidate:
-            return candidate
     if platform.system() == "Linux":
+        # platform.processor() is just "x86_64" here; prefer the model name
         try:
             with open("/proc/cpuinfo", encoding="utf-8") as fh:
                 for line in fh:
@@ -94,6 +92,9 @@ def _cpu_name() -> str | None:
                         return line.split(":", 1)[1].strip()
         except OSError:
             pass
+    for candidate in (os.environ.get("PROCESSOR_IDENTIFIER"), platform.processor()):
+        if candidate:
+            return candidate
     return None
 
 
