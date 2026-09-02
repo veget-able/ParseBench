@@ -198,6 +198,7 @@ def group_quality_blocks(combined: dict, source: str) -> dict:
             "docs_scored": ref_cats[g]["report"].get("successful"),
             "deterministic": deterministic,
             "rep_doc_counts": combined["rep_doc_counts"],
+            "s_per_page": _category_latency(combined, g),
         }
         if g == "table":
             block["gtrm"] = block["score"]
@@ -218,6 +219,23 @@ def group_quality_blocks(combined: dict, source: str) -> dict:
             "categories": cats,
         }
     return blocks
+
+
+def _category_latency(combined: dict, group: str) -> dict:
+    """Official per-category latency stats, median across repetitions."""
+    out = {}
+    for name, key in (("median", "p50"), ("p95", "p95"), ("mean", "avg")):
+        vals = []
+        for r in combined["runs"]:
+            if group not in r["categories"]:
+                continue
+            stats = r["categories"][group]["report"].get("aggregate_stats", {})
+            lat = stats.get("latency_ms_per_page") or stats.get("latency_ms") or {}
+            if lat.get(key) is not None:
+                vals.append(lat[key])
+        ms = median(vals) if vals else None
+        out[name] = _round4(ms / 1000.0) if ms is not None else None
+    return out
 
 
 def _doc_latencies(run: dict) -> list[float]:

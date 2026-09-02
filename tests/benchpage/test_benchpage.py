@@ -110,16 +110,19 @@ def test_emit_round_trip(tmp_path):
     assert index[0]["run_id"] == "20990101-test"
 
 
-def _cat(metrics, successful=3, docs=None):
-    return {"report": {"aggregate_metrics": metrics, "successful": successful},
-            "docs": docs or []}
+def _cat(metrics, successful=3, docs=None, latency=None):
+    report = {"aggregate_metrics": metrics, "successful": successful}
+    if latency:
+        report["aggregate_stats"] = {"latency_ms": latency}
+    return {"report": report, "docs": docs or []}
 
 
 def test_group_quality_blocks_overall():
     run = {
         "categories": {
             "table": _cat({"avg_grits_trm_composite": 0.72, "avg_grits_con": 0.81,
-                           "avg_table_record_match": 0.60}),
+                           "avg_table_record_match": 0.60},
+                          latency={"p50": 200.0, "p95": 300.0, "avg": 250.0}),
             "chart": _cat({"avg_rule_pass_rate": 0.10}),
             "layout": _cat({"avg_layout_element_rule_pass_rate": 0.60}),
             "text_content": _cat({"avg_content_faithfulness": 0.80}),
@@ -138,6 +141,9 @@ def test_group_quality_blocks_overall():
     assert blocks["overall"]["score"] == 54.4
     assert blocks["overall"]["metric"] == "average_across_categories"
     assert blocks["overall"]["categories"]["layout"] == 60.0
+    # per-category official latency travels with the block
+    assert blocks["table"]["s_per_page"]["median"] == 0.2
+    assert blocks["chart"]["s_per_page"]["median"] is None
 
     perf = collect.full_performance_block(combined, "measured")
     assert perf["s_per_page"]["median"] == 0.2  # pooled median of 100 and 300 ms
