@@ -129,11 +129,17 @@ def load_full_run(pipeline_dir: str | Path) -> dict:
     d = Path(pipeline_dir)
     categories: dict = {}
     docs: list = []
+    seen: set = set()
     for g in GROUPS:
         if (d / g / "_evaluation_report.json").exists():
             r = load_run(d / g)
             categories[g] = r
-            docs.extend(r["docs"])
+            # text documents appear in both text_content and text_formatting
+            # evaluations with the same measured latency; keep each document once
+            for doc in r["docs"]:
+                if doc["doc"] not in seen:
+                    seen.add(doc["doc"])
+                    docs.append(doc)
     if not categories:
         raise FileNotFoundError(f"no category evaluations under {d}")
     return {"categories": categories, "docs": docs}
