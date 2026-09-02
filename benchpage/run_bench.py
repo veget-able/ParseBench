@@ -99,12 +99,17 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
             continue
         rep_dirs = [work / f"rep{rep}" / pid / spec["parse_bench_pipeline"]
                     for rep in range(reps)]
-        if group == "all":
-            merged = collect.combine_full_reps(
-                [collect.load_full_run(d) for d in rep_dirs])
-        else:
-            merged = collect.combine_reps(
-                [collect.load_run(d) for d in rep_dirs])
+        try:
+            if group == "all":
+                merged = collect.combine_full_reps(
+                    [collect.load_full_run(d) for d in rep_dirs])
+            else:
+                merged = collect.combine_reps(
+                    [collect.load_run(d) for d in rep_dirs])
+        except FileNotFoundError as exc:
+            failed.setdefault(pid, f"artifacts missing: {exc}")
+            print(f"[benchpage] pipeline {pid} skipped in collection: {exc}")
+            continue
         merged_by_pipeline[pid] = merged
         summary["run"]["dataset"]["docs"] = len(merged["reference"]["docs"])
 
@@ -147,6 +152,8 @@ def run(config_path: str, group: str, reps: int, results_dir: str,
         if fp is not None:
             summary["footprint"][pid] = {"source": SOURCE_MEASURED, **fp}
 
+    if failed:
+        summary["run"]["failed_pipelines"] = failed
     _add_ratios(summary["performance"], baseline_id)
     documents = collect.document_rows(merged_by_pipeline)
     return write_run(results_dir, summary, documents, label)
