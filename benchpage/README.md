@@ -82,8 +82,15 @@ venv is installed as `parse-bench[<engine extras>,runners]`, since the
 `runners` extra carries the provider-side dependencies (docling-core for
 the docling_serve provider, among others). Note the published
 leaderboard's "Docling-models" row was produced via the `docling_parse`
-pipeline against a hosted inference endpoint; the scoring code downstream
-of the provider is the same.
+pipeline against a hosted inference endpoint running Docling's VLM tier,
+a different mode from the standard pipeline measured here.
+
+Version note: on the same pinned instance, docling-slim 2.122.0 scores
+67.1 on the tables group where 2.124.0 scores 58.5 (both 503/503
+successful, standard pipeline via docling-serve 1.31.0) — a regression
+between those docling versions, not an artifact of this harness. We
+measure whatever the default install resolves and record the exact
+version in each run's summary.
 
 ## Roster notes
 
