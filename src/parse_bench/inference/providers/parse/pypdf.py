@@ -77,7 +77,7 @@ class PyPDFProvider(Provider):
             return {
                 "pages": pages,
                 "num_pages": len(reader.pages),
-                "metadata": reader.metadata if hasattr(reader, "metadata") else {},
+                "metadata": self._plain_metadata(reader),
             }
 
         except FileNotFoundError as e:
@@ -88,6 +88,29 @@ class PyPDFProvider(Provider):
             if any(kw in error_str for kw in ["encrypted", "password", "corrupt"]):
                 raise ProviderPermanentError(f"Cannot read PDF: {e}") from e
             raise ProviderPermanentError(f"Error extracting text: {e}") from e
+
+    @staticmethod
+    def _plain_metadata(reader: Any) -> dict[str, str]:
+        """Return document metadata as plain strings.
+
+        pypdf metadata values can be unresolved ``IndirectObject`` references
+        (seen with ``/Keywords`` entries), which are not JSON-serializable and
+        break raw-output persistence.
+        """
+        try:
+            metadata = reader.metadata
+        except Exception:
+            return {}
+        if not metadata:
+            return {}
+        plain: dict[str, str] = {}
+        for key, value in metadata.items():
+            try:
+                resolved = value.get_object() if hasattr(value, "get_object") else value
+                plain[str(key)] = str(resolved)
+            except Exception:
+                plain[str(key)] = repr(value)
+        return plain
 
     def run_inference(self, pipeline: PipelineSpec, request: InferenceRequest) -> RawInferenceResult:
         """
