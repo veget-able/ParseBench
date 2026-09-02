@@ -2,8 +2,8 @@
  "schema_version": 1,
  "run": {
   "id": "20260901-c7i2x-r2",
-  "started": "2026-09-02T11:10:33Z",
-  "parsebench_commit": "0f94343",
+  "started": "2026-09-02T11:52:41Z",
+  "parsebench_commit": "321e477",
   "dataset": {
    "group": "all",
    "docs": 2078
@@ -16,7 +16,7 @@
  },
  "env": {
   "instance": "c7i.2xlarge",
-  "cpu": "x86_64",
+  "cpu": "Intel(R) Xeon(R) Platinum 8488C",
   "ram_gb": 15.3,
   "os": "Linux 6.17.0-1017-aws",
   "python": "3.12.3"
@@ -31,7 +31,7 @@
     "pymupdf-layout": "1.28.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "0c38f67734e8a654463d5527ff52ceb8b230f432b74f36f181eaa28341f04867"
+   "lock_sha256": "f5a4fdb921615d069aea6661ed8b73a0d3d83db1e6bbcfdc072d6159b707a9b5"
   },
   "pymupdf_text": {
    "label": "PyMuPDF · text (core, no layout)",
@@ -40,7 +40,7 @@
     "pymupdf": "1.28.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "0c38f67734e8a654463d5527ff52ceb8b230f432b74f36f181eaa28341f04867"
+   "lock_sha256": "f5a4fdb921615d069aea6661ed8b73a0d3d83db1e6bbcfdc072d6159b707a9b5"
   },
   "markitdown": {
    "label": "MarkItDown",
@@ -49,7 +49,7 @@
     "markitdown": "0.1.7"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "7e97b93b38ae9c9e7068a729fce3d336232062525089d7060510dc730dc77b5f"
+   "lock_sha256": "42b2ec74dd4e738430cb5e688428429250a786479c636f0f4d9755250c0efc2c"
   },
   "liteparse": {
    "label": "LiteParse (no OCR)",
@@ -58,7 +58,7 @@
     "liteparse": "2.14.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "936620300d2f54d63a659203b7e449b154af21168b29497010fd0a662aa80b37"
+   "lock_sha256": "23e6fb7824b9ae739993b024c11d94f409900dfe8ba920a09180af24710b816e"
   },
   "docling": {
    "label": "Docling",
