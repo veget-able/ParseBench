@@ -1,0 +1,124 @@
+# benchpage — measurement harness for the public PyMuPDF benchmark page
+
+This directory produces the JSON consumed by the live benchmark section on
+pymupdf.io (and by embeds of it, e.g. the Speed section of
+`/compare/docling`). It wraps the stock `parse-bench` CLI as a subprocess
+and never modifies ParseBench itself, so the quality numbers are exactly
+what an unmodified checkout produces.
+
+## What gets measured
+
+| Section | Metrics | How |
+|---|---|---|
+| quality | GTRM (`avg_grits_trm_composite`), GriTS content, TableRecordMatch, determinism | lifted verbatim from ParseBench's `_evaluation_report.json` aggregates |
+| performance | seconds/page (p50, p95, mean), pages/min, cold start (import + first document), peak RSS, ratio vs baseline | ParseBench's own `aggregate_stats.latency_ms_per_page`; RSS sampled via psutil; cold start in fresh subprocesses |
+| footprint | installed MB, download MB, transitive dependency count, install seconds | throwaway venv per pipeline |
+
+The harness performs no re-aggregation of ParseBench data: quality and
+latency aggregates are ParseBench's own numbers, the only cross-run
+arithmetic is the median across repetitions, and per-document rows are
+the unmodified rows of the median repetition.
+
+## Result layout
+
+```
+results/index.json                   run manifest (history, newest first)
+results/runs/<run_id>/summary.json   everything the page needs on first load
+results/runs/<run_id>/documents.json per-document detail, loaded lazily
+```
+
+`summary.json` is keyed by stable pipeline ids throughout, so an embed can
+slice out a two-parser subset without re-aggregating. Every metric block
+carries `"source": "measured" | "placeholder"`. Schema reference and
+validation live in `schema.py`; `emit.write_run` refuses to write an
+invalid summary. The checked-in run `20260820-sample-placeholder` is an
+illustrative schema demo only and will be replaced by the first run from
+the pinned runner.
+
+## Running
+
+Each pipeline runs from its own venv (clean installs, no cross
+contamination). Describe them in a config, then:
+
+```
+python -m benchpage.run_bench --config benchpage/pipelines.example.json \
+    --group table --reps 3 --results-dir results --label weekly
+```
+
+Cold start and footprint are slower and opt-in via `--with-coldstart` and
+`--with-footprint`; both also work standalone (`python -m
+benchpage.coldstart --help`, `python -m benchpage.footprint --help`).
+
+## Measurement rules
+
+* `--max_concurrent 1` always (hardcoded). The sequential path is the only
+  one whose per-document latency is meaningful.
+* Repetitions interleave pipelines A/B/A/B in the same session, so machine
+  noise cancels in the ratio; each official latency stat is reported as
+  its median across repetitions.
+* Quality must be identical across repetitions; `deterministic` in the
+  summary records whether it was.
+* Cold start requires model files already on disk (run each tool once
+  first) so the network is never inside the timed path.
+* Absolute times are comparable across runs only from the pinned runner
+  (fixed instance type, set `BENCH_INSTANCE_TYPE`; never a burstable
+  t-family instance). Ratios are meaningful anywhere.
+* Provenance travels with every run: ParseBench commit, per-venv
+  `pip freeze` hash, instance/CPU/OS/Python, and the LLM-normalization
+  setting (off by default since upstream #107).
+
+## Docling
+
+Docling is measured through upstream's stock `docling_serve` pipeline,
+which calls the official docling-serve HTTP API
+(`DOCLING_SERVE_ENDPOINT_URL`, endpoint `/v1/convert/source`), so both
+sides of the pair are unmodified upstream code. The runner starts
+docling-serve on the same machine before the run; Docling's latency
+therefore includes a localhost HTTP hop, recorded here as a caveat, while
+cold start and footprint measure the docling library directly in its own
+venv. Because the docling venv only hosts the server, the docling entry
+sets `parse_bench_cmd` to the shared parse-bench venv's CLI; that client
+venv is installed as `parse-bench[<engine extras>,runners]`, since the
+`runners` extra carries the provider-side dependencies (docling-core for
+the docling_serve provider, among others). Note the published
+leaderboard's "Docling-models" row was produced via the `docling_parse`
+pipeline against a hosted inference endpoint running Docling's VLM tier,
+a different mode from the standard pipeline measured here.
+
+Version note: on the same pinned instance, docling-slim 2.122.0 scores
+67.1 on the tables group where 2.124.0 scores 58.5 (both 503/503
+successful, standard pipeline via docling-serve 1.31.0) — a regression
+between those docling versions, not an artifact of this harness. We
+measure whatever the default install resolves and record the exact
+version in each run's summary.
+
+## Roster notes
+
+The example config covers the PyMuPDF layout stack, the vanilla PyMuPDF
+text core as a speed reference, pypdf, MarkItDown, LiteParse, Docling, and
+LlamaParse Cost Effective as the one cloud reference.
+
+* **LiteParse.** Upstream's `liteparse` provider shells out to the `lit`
+  CLI at `<repository parent>/target/release/lit` (the path of a Rust
+  workspace build). The PyPI package `liteparse` ships the same CLI, so
+  copy `<venv>/Scripts/lit.exe` (Windows) or `<venv>/bin/lit` (Linux) to
+  that path; no provider change is needed. `lit parse --format json` from
+  the 2.14.0 wheel matches the provider's contract (`pages[].page/text`,
+  `--no-links`, `--no-ocr`, `--preserve-small-text`).
+* **LlamaParse.** `llamaparse_cost_effective` needs `LLAMA_CLOUD_API_KEY`
+  in the environment of the process that runs `run_bench`; never put the
+  key in a config file. Cloud engines get no cold-start or footprint
+  measurement, and their latency includes the network, so they are
+  reported as reference rows. The leaderboard's cost column is cents per
+  page: 0.375 for the cost-effective tier, i.e. $3.75 per 1k pages.
+* **pypdf** scores 0 on the tables group by design: its plain-text output
+  carries no table structure, so the GTRM matcher finds no tables. The
+  published leaderboard shows the same 0.00.
+
+GPU/vLLM pipelines are cited from the published leaderboard, not re-run.
+
+## Follow-ups
+
+* Start-run-stop workflow for the pinned AWS runner (schedule/dispatch
+  triggered only; no PR-triggered execution on the self-hosted runner),
+  including bringing docling-serve up and down around the run.

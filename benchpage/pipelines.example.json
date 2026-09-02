@@ -1,0 +1,116 @@
+{
+  "baseline": "pymupdf4llm",
+  "llm_normalization": false,
+  "pipelines": [
+    {
+      "id": "pymupdf4llm",
+      "label": "PyMuPDF · layout + HTML tables",
+      "category": "local",
+      "parse_bench_pipeline": "pymupdf4llm_markdown",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {
+        "pymupdf": "1.28.2",
+        "pymupdf4llm": "1.28.2",
+        "pymupdf-layout": "1.28.2"
+      },
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "import pymupdf4llm",
+        "first_doc_expr": "pymupdf4llm.to_markdown(DOC)",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["pymupdf4llm==1.28.2"]
+    },
+    {
+      "id": "pymupdf_text",
+      "label": "PyMuPDF · text (core, no layout)",
+      "category": "local",
+      "parse_bench_pipeline": "pymupdf_text",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"pymupdf": "1.28.2"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "import pymupdf",
+        "first_doc_expr": "chr(10).join(p.get_text() for p in pymupdf.open(DOC))",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["pymupdf==1.28.2"]
+    },
+    {
+      "id": "pypdf",
+      "label": "pypdf",
+      "category": "local",
+      "parse_bench_pipeline": "pypdf_baseline",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"pypdf": "6.16.2"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from pypdf import PdfReader",
+        "first_doc_expr": "chr(10).join((p.extract_text() or '') for p in PdfReader(DOC).pages)",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["pypdf"]
+    },
+    {
+      "id": "markitdown",
+      "label": "MarkItDown",
+      "category": "local",
+      "parse_bench_pipeline": "markitdown",
+      "python": ".venvs/markitdown/Scripts/python.exe",
+      "versions": {"markitdown": "0.1.7", "pdfminer.six": "20260107"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from markitdown import MarkItDown",
+        "first_doc_expr": "MarkItDown().convert(DOC).text_content",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["markitdown[pdf]"]
+    },
+    {
+      "id": "liteparse",
+      "label": "LiteParse (no OCR)",
+      "category": "local",
+      "parse_bench_pipeline": "liteparse_markdown",
+      "python": ".venvs/liteparse/Scripts/python.exe",
+      "versions": {"liteparse": "2.14.0"},
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from liteparse import LiteParse",
+        "first_doc_expr": "LiteParse(ocr_enabled=False).parse(DOC)",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["liteparse"]
+    },
+    {
+      "id": "llamaparse_ce",
+      "label": "LlamaParse Cost Effective",
+      "category": "cloud",
+      "parse_bench_pipeline": "llamaparse_cost_effective",
+      "python": ".venvs/pymupdf4llm/Scripts/python.exe",
+      "versions": {"tier": "cost_effective", "version": "latest"},
+      "fee_per_1k_pages": 3.75
+    },
+    {
+      "id": "docling",
+      "label": "Docling",
+      "category": "local",
+      "parse_bench_pipeline": "docling_serve",
+      "parse_bench_cmd": [".venvs/pymupdf4llm/Scripts/parse-bench.exe"],
+      "env": {"DOCLING_SERVE_ENDPOINT_URL": "http://localhost:5001"},
+      "python": ".venvs/docling/Scripts/python.exe",
+      "versions": {
+        "docling-serve": "1.31.0",
+        "docling": "2.122.0 (slim)",
+        "torch": "2.13.0+cpu"
+      },
+      "fee_per_1k_pages": null,
+      "coldstart": {
+        "import_stmt": "from docling.document_converter import DocumentConverter",
+        "first_doc_expr": "DocumentConverter().convert(DOC).document.export_to_markdown()",
+        "doc": "data/test/docs/table/222876fb_page22.pdf"
+      },
+      "footprint_packages": ["docling"],
+      "footprint_extra_index_url": "https://download.pytorch.org/whl/cpu"
+    }
+  ]
+}
