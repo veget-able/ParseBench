@@ -2,8 +2,8 @@
  "schema_version": 1,
  "run": {
   "id": "20260901-c7i2x-r2",
-  "started": "2026-09-02T11:52:41Z",
-  "parsebench_commit": "321e477",
+  "started": "2026-09-02T13:12:22Z",
+  "parsebench_commit": "a65ca16",
   "dataset": {
    "group": "all",
    "docs": 2078
@@ -31,7 +31,7 @@
     "pymupdf-layout": "1.28.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "f5a4fdb921615d069aea6661ed8b73a0d3d83db1e6bbcfdc072d6159b707a9b5"
+   "lock_sha256": "e4c7cc9fb98a46eaabe560ef92574e68ea6ff4f5520d342fa72d6c1734ae75c0"
   },
   "pymupdf_text": {
    "label": "PyMuPDF · text (core, no layout)",
@@ -40,7 +40,7 @@
     "pymupdf": "1.28.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "f5a4fdb921615d069aea6661ed8b73a0d3d83db1e6bbcfdc072d6159b707a9b5"
+   "lock_sha256": "e4c7cc9fb98a46eaabe560ef92574e68ea6ff4f5520d342fa72d6c1734ae75c0"
   },
   "markitdown": {
    "label": "MarkItDown",
@@ -49,7 +49,7 @@
     "markitdown": "0.1.7"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "42b2ec74dd4e738430cb5e688428429250a786479c636f0f4d9755250c0efc2c"
+   "lock_sha256": "16795bc35dcf8757a12be5bd8ea07d077a602a7b5f24c1ccccb7664bec57ad88"
   },
   "liteparse": {
    "label": "LiteParse (no OCR)",
@@ -58,7 +58,7 @@
     "liteparse": "2.14.2"
    },
    "fee_per_1k_pages": null,
-   "lock_sha256": "23e6fb7824b9ae739993b024c11d94f409900dfe8ba920a09180af24710b816e"
+   "lock_sha256": "786be03998ccb4fd2682af37c637283371c75eac99f0580a314f7849d8ce4d12"
   },
   "docling": {
    "label": "Docling",
@@ -84,6 +84,11 @@
      2078,
      2078
     ],
+    "s_per_page": {
+     "median": 0.608,
+     "p95": 2.3765,
+     "mean": 0.9258
+    },
     "gtrm": 72.0,
     "grits_con": 81.11,
     "table_record_match": 60.14
@@ -98,6 +103,11 @@
      2078,
      2078
     ],
+    "s_per_page": {
+     "median": 0.005,
+     "p95": 0.014,
+     "mean": 0.0061
+    },
     "gtrm": 0.0,
     "grits_con": 0.0,
     "table_record_match": 0.0
@@ -112,6 +122,11 @@
      2078,
      2078
     ],
+    "s_per_page": {
+     "median": 0.0935,
+     "p95": 0.539,
+     "mean": 0.152
+    },
     "gtrm": 15.77,
     "grits_con": 24.27,
     "table_record_match": 5.54
@@ -126,6 +141,11 @@
      2078,
      2078
     ],
+    "s_per_page": {
+     "median": 0.153,
+     "p95": 0.1715,
+     "mean": 0.155
+    },
     "gtrm": 42.36,
     "grits_con": 58.95,
     "table_record_match": 23.29
@@ -140,6 +160,11 @@
      2078,
      2078
     ],
+    "s_per_page": {
+     "median": 13.011,
+     "p95": 67.032,
+     "mean": 20.6248
+    },
     "gtrm": 58.53,
     "grits_con": 66.96,
     "table_record_match": 48.61
@@ -155,7 +180,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.297,
+     "p95": 2.114,
+     "mean": 0.6113
+    }
    },
    "pymupdf_text": {
     "source": "measured",
@@ -166,7 +196,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.0075,
+     "p95": 0.018,
+     "mean": 0.0096
+    }
    },
    "markitdown": {
     "source": "measured",
@@ -177,7 +212,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.1395,
+     "p95": 0.6285,
+     "mean": 0.2149
+    }
    },
    "liteparse": {
     "source": "measured",
@@ -188,7 +228,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.1545,
+     "p95": 0.171,
+     "mean": 0.1568
+    }
    },
    "docling": {
     "source": "measured",
@@ -199,7 +244,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 8.008,
+     "p95": 17.057,
+     "mean": 9.016
+    }
    }
   },
   "layout": {
@@ -212,7 +262,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.7055,
+     "p95": 3.2265,
+     "mean": 1.2425
+    }
    },
    "pymupdf_text": {
     "source": "measured",
@@ -223,7 +278,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.0065,
+     "p95": 0.0115,
+     "mean": 0.0068
+    }
    },
    "markitdown": {
     "source": "measured",
@@ -234,7 +294,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.113,
+     "p95": 0.585,
+     "mean": 0.1654
+    }
    },
    "liteparse": {
     "source": "measured",
@@ -245,7 +310,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.1545,
+     "p95": 0.1635,
+     "mean": 0.1551
+    }
    },
    "docling": {
     "source": "measured",
@@ -256,7 +326,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 14.0115,
+     "p95": 46.0145,
+     "mean": 18.4359
+    }
    }
   },
   "text_content": {
@@ -269,7 +344,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.4445,
+     "p95": 3.5285,
+     "mean": 1.4121
+    }
    },
    "pymupdf_text": {
     "source": "measured",
@@ -280,7 +360,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.0055,
+     "p95": 0.0175,
+     "mean": 0.0074
+    }
    },
    "markitdown": {
     "source": "measured",
@@ -291,7 +376,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.1155,
+     "p95": 0.703,
+     "mean": 0.3103
+    }
    },
    "liteparse": {
     "source": "measured",
@@ -302,7 +392,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.151,
+     "p95": 0.1745,
+     "mean": 0.1549
+    }
    },
    "docling": {
     "source": "measured",
@@ -313,7 +408,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 10.008,
+     "p95": 26.009,
+     "mean": 11.407
+    }
    }
   },
   "text_formatting": {
@@ -326,7 +426,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.428,
+     "p95": 3.741,
+     "mean": 1.4164
+    }
    },
    "pymupdf_text": {
     "source": "measured",
@@ -337,7 +442,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.0055,
+     "p95": 0.0175,
+     "mean": 0.0075
+    }
    },
    "markitdown": {
     "source": "measured",
@@ -348,7 +458,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.1185,
+     "p95": 0.708,
+     "mean": 0.3241
+    }
    },
    "liteparse": {
     "source": "measured",
@@ -359,7 +474,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 0.152,
+     "p95": 0.176,
+     "mean": 0.1555
+    }
    },
    "docling": {
     "source": "measured",
@@ -370,7 +490,12 @@
     "rep_doc_counts": [
      2078,
      2078
-    ]
+    ],
+    "s_per_page": {
+     "median": 10.008,
+     "p95": 26.0105,
+     "mean": 11.43
+    }
    }
   },
   "overall": {
