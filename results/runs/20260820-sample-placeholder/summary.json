@@ -1,0 +1,88 @@
+{
+ "schema_version": 1,
+ "run": {
+  "id": "20260820-sample-placeholder",
+  "started": "2026-08-20T00:00:00Z",
+  "parsebench_commit": "34b7345",
+  "dataset": {"group": "table", "docs": 503},
+  "llm_normalization": false,
+  "repetitions": 3
+ },
+ "env": {
+  "instance": "c7i.xlarge",
+  "cpu": "placeholder",
+  "ram_gb": 8.0,
+  "os": "Linux (placeholder)",
+  "python": "3.12"
+ },
+ "pipelines": {
+  "pymupdf4llm": {
+   "label": "PyMuPDF · layout + HTML tables",
+   "category": "local",
+   "versions": {"pymupdf": "1.28.2", "pymupdf4llm": "1.28.2", "pymupdf-layout": "1.28.2"},
+   "fee_per_1k_pages": null,
+   "lock_sha256": null
+  },
+  "docling": {
+   "label": "Docling",
+   "category": "local",
+   "versions": {"docling": "2.121.0"},
+   "fee_per_1k_pages": null,
+   "lock_sha256": null
+  }
+ },
+ "quality": {
+  "table": {
+   "pymupdf4llm": {
+    "source": "placeholder",
+    "gtrm": 72.0,
+    "grits_con": null,
+    "table_record_match": null,
+    "docs_scored": 503,
+    "deterministic": true
+   },
+   "docling": {
+    "source": "placeholder",
+    "gtrm": null,
+    "grits_con": null,
+    "table_record_match": null,
+    "docs_scored": 0,
+    "deterministic": null
+   }
+  }
+ },
+ "performance": {
+  "pymupdf4llm": {
+   "source": "placeholder",
+   "s_per_page": {"median": 0.49, "p95": 1.8, "mean": 0.55},
+   "pages_per_min": 122.4,
+   "cold_start_s": {"import": 0.4, "first_doc": 1.2, "runs": 3},
+   "peak_rss_mb": 850.0,
+   "ratio_vs_baseline": 1.0
+  },
+  "docling": {
+   "source": "placeholder",
+   "s_per_page": {"median": null, "p95": null, "mean": null},
+   "pages_per_min": null,
+   "cold_start_s": null,
+   "peak_rss_mb": null,
+   "ratio_vs_baseline": null
+  }
+ },
+ "footprint": {
+  "pymupdf4llm": {
+   "source": "placeholder",
+   "install_mb": 265.0,
+   "download_mb": null,
+   "dep_count": null,
+   "install_s": null
+  },
+  "docling": {
+   "source": "placeholder",
+   "install_mb": 6059.0,
+   "download_mb": null,
+   "dep_count": null,
+   "install_s": null
+  }
+ }
+}

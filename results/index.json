@@ -1,0 +1,20 @@
+[
+ {
+  "run_id": "20260901-c7i2x-r2",
+  "started": "2026-09-02T11:10:33Z",
+  "label": "c7i.2xlarge-r2",
+  "files": {
+   "summary": "runs/20260901-c7i2x-r2/summary.json",
+   "documents": "runs/20260901-c7i2x-r2/documents.json"
+  }
+ },
+ {
+  "run_id": "20260820-sample-placeholder",
+  "started": "2026-08-20T00:00:00Z",
+  "label": "schema-sample",
+  "files": {
+   "summary": "runs/20260820-sample-placeholder/summary.json",
+   "documents": "runs/20260820-sample-placeholder/documents.json"
+  }
+ }
+]
